@@ -1,0 +1,433 @@
+﻿init.sqf:
+[code]
+/*
+if (hasInterface) then
+{
+	waitUntil{!isNull player}
+	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_class = _resolved select 0;//rflm
+	_colour = _resolved select 1;//usmc_wood
+	if (_class != "pilot" && _class != "helipilot" && _class != "sniper" && _class != "spotter") then
+	{
+		CHVD_maxView = 1500;//limitiert CHVD auf die maximale sichtweite 1500
+		setViewDistance (1500 min viewDistance);//setzt die viewdistance auf maximal 1500
+	};
+};
+*/
+CODI_LO_equipUnarmed = false;//false=einheit wird fertig ausgerüstet, true=einheit wird unbewaffnet ausgerüstet
+CODI_LO_customEquip = false;//false=einheit wird normal ausgerüstet, true=einheit wird nicht ausgerüstet
+CODI_LO_restrictedClass = false;//false=keine einschränkung der Klassen, true=einheit kann nur die gewählte Klasse spielen
+CODI_LO_restrictedColours = ["usmc_wood","usmc_desert"];//einschränkung der wählbaren Fraktionen/Tarnfarben
+CODI_LO_equipOnRespawn = true;//einheit wird bei respawn neu ausgerüstet   default: true
+CODI_LO_noShotsAtMissionEnd = true;//einheit bekommt bei missionsende alle waffen und items abgenommen   default: true
+CODI_LO_setCallsigns = true;//Callsigns werden automatisch benannt falls die einheiten nach dem Schame "Alpha - FTL" benannt wurden   default: false
+CODI_LO_vanillaFatigue = false;//true um vanilla fatigue wieder einzuschalten
+if (isNil "CODI_LO_option_va") then
+{
+   CODI_LO_option_va = false;//freischalten das virtual arsenal nutzen zu können   default: false
+};
+if (isNil "CODI_LO_option_lva") then
+{
+   CODI_LO_option_lva = true;//freischalten das whitelisted virtual arsenal nutzen zu können   default: false
+};
+if (isNil "CODI_LO_option_teleport") then
+{
+   CODI_LO_option_teleport = true;//einheit kann sich teleportieren   default: true
+};
+if (isNil "CODI_LO_option_spectate") then
+{
+   CODI_LO_option_spectate = true;//einheit kann zusehen   default: true
+};
+if (isNil "CODI_LO_option_para") then
+{
+	CODI_LO_option_para = true;//option zum ausrüsten mit fallschirm   default: false
+};
+if (isNil "CODI_LO_option_dive") then
+{
+	CODI_LO_option_dive = false;//option zum ausrüsten mit tauchausrüstung   default: false
+};
+CODI_LO_postLoadout = {//callback um ausrüstung anzupassen, darf keinen Seiteneffekt haben (nur variablen dürfen geändert werden, addWeapon o.ä. sind nicht aufzurufen)
+	private["_unit"];
+	_unit = param[0, player];
+	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_class = _resolved select 0;//rflm
+	_colour = _resolved select 1;//usmc_wood
+	/*
+	if (_class == "ftl") then
+	{
+		["CODI_VArty_Tablet"] call CODI_LO_fnc_addBackpackItem;
+	};
+	if (_colour == "usmc_wood") then
+	{
+		if (count(CODI_LO_uniform) != 0) then
+		{
+			if ((CODI_LO_uniform select 0) == "rhs_uniform_FROG01_wd") then
+			{
+				[CODI_LO_uniform, "MNP_CombatUniform_USMC_T"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_vest) != 0) then
+		{
+			if ((CODI_LO_vest select 0) == "rhsusf_spc" || (CODI_LO_vest select 0) == "rhsusf_spc_rifleman") then
+			{
+				[CODI_LO_vest, "MNP_Vest_USMC_2"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_backpack) != 0) then
+		{
+			if ((CODI_LO_backpack select 0) == "rhsusf_assault_eagleaiii_coy") then
+			{
+				[CODI_LO_backpack, "B_Carryall_cbr"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_helmet) != 0) then
+		{
+			if ((CODI_LO_helmet select 0) == "rhsusf_mich_helmet_marpatwd") then
+			{
+				[CODI_LO_helmet, "MNP_Helmet_USMC"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+	};
+	if (_colour == "usmc_desert") then
+	{
+		if (count(CODI_LO_uniform) != 0) then
+		{
+			if ((CODI_LO_uniform select 0) == "rhs_uniform_FROG01_d") then
+			{
+				[CODI_LO_uniform, "MNP_CombatUniform_USMC_D"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_vest) != 0) then
+		{
+			if ((CODI_LO_vest select 0) == "rhsusf_spc" || (CODI_LO_vest select 0) == "rhsusf_spc_rifleman") then
+			{
+				[CODI_LO_vest, "MNP_Vest_USMC_2"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_backpack) != 0) then
+		{
+			if ((CODI_LO_backpack select 0) == "rhsusf_assault_eagleaiii_coy") then
+			{
+				[CODI_LO_backpack, "B_Carryall_cbr"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+		if (count(CODI_LO_helmet) != 0) then
+		{
+			if ((CODI_LO_helmet select 0) == "rhsusf_mich_helmet_marpatd") then
+			{
+				[CODI_LO_helmet, "MNP_Helmet_USMC_D"] call BIS_fnc_ArrayUnshift;
+			};
+		};
+	};
+	CODI_LO_uniform = [];
+	CODI_LO_vest = [];
+	CODI_LO_backpack = [];
+	CODI_LO_helmet = [];
+	CODI_LO_nv = [];
+	CODI_LO_radio = [];
+	CODI_LO_gps = [];
+	CODI_LO_watch = [];
+	CODI_LO_compass = [];
+	CODI_LO_goggles = [];
+	CODI_LO_binocular = [];
+	CODI_LO_binocularAmmo = [];
+	CODI_LO_map = [];
+	CODI_LO_uniformItems = [];
+	CODI_LO_vestItems = [];
+	CODI_LO_backpackItems = [];
+	CODI_LO_weaponPacks = [];//auf einen wert (CODI_LO_weaponPacks = ["m4","g36"];) setzen
+	*/
+};
+CODI_LO_postWeaponLoadout = {//callback um bewaffnung anzupassen, darf keinen Seiteneffekt haben (nur variablen dürfen geändert werden, addWeapon o.ä. sind nicht aufzurufen)
+	private["_unit"];
+	_unit = param[0, player];
+	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_class = _resolved select 0;//rflm
+	_colour = _resolved select 1;//usmc_wood
+	/*
+	CODI_LO_primaryWeapon = [];
+	CODI_LO_secondaryWeapon = [];
+	CODI_LO_launcher = [];
+	CODI_LO_primaryWeaponLaser = [];
+	CODI_LO_primaryWeaponSilencer = [];
+	CODI_LO_primaryWeaponOptic = [];
+	CODI_LO_primaryWeaponBipod = [];
+	CODI_LO_secondaryWeaponLaser = [];
+	CODI_LO_secondaryWeaponSilencer = [];
+	CODI_LO_secondaryWeaponOptic = [];
+	CODI_LO_secondaryWeaponBipod = [];
+	CODI_LO_launcherLaser = [];
+	CODI_LO_launcherSilencer = [];
+	CODI_LO_launcherOptic = [];
+	CODI_LO_launcherBipod = [];
+	CODI_LO_uniformMagazines = [];
+	CODI_LO_vestMagazines = [];
+	CODI_LO_backpackMagazines = [];
+	CODI_LO_primaryWeaponMagazines = [];//magazine die sich initial in waffen befinden sollen
+	CODI_LO_secondaryWeaponMagazines = [];
+	CODI_LO_launcherMagazines = [];
+	*/
+};
+CODI_LO_postEquip = {//callback um abschließend noch etwas zu machen, wird auch bei CODI_LO_customEquip=true ausgeführt, darf Seiteneffekt haben
+	private["_unit"];
+	_unit = param[0, player];
+	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_class = _resolved select 0;//rflm
+	_colour = _resolved select 1;//usmc_wood
+	//bitte nach Möglichkeit nicht nutzen, lieber CODI_LO_postLoadout und CODI_LO_postWeaponLoadout
+};
+//code der an einer munitionskiste (normale gewehrmunition,lmg,dm) ausgeführt wird   default: {}
+CODI_LO_fnc_postInitAmmoResupply = {
+/*
+   private["_veh"];
+   _veh = _this select 0;
+   _veh addMagazineCargoGlobal ["150Rnd_762x54_Box_Tracer", 5];
+*/
+};
+//code der an einer medickiste ausgeführt wird   default: {}
+CODI_LO_fnc_postInitMedicalResupply = {
+
+};
+//code der an einer granatenkiste (rauch,he,unterlauf,leuchtmittel) ausgeführt wird   default: {}
+CODI_LO_fnc_postInitGrenadeResupply = {
+
+};
+//code der an einer launcherkiste (at,aa,lat) ausgeführt wird   default: {}
+CODI_LO_fnc_postInitLauncherResupply = {
+
+};
+//code der an einer spezialmunitionskiste (mmg,hmg,sniper,ss) ausgeführt wird   default: {}
+CODI_LO_fnc_postInitSpecialAmmoResupply = {
+
+};
+CODI_LO_initialised = true;//muss als letzte variable gesetzt werden
+[/code]
+
+
+
+
+
+Klassen:
+Unarmed (unarmed) - unbewaffneter Soldat
+Rifleman (rflm) - einfacher Soldat ohne spezialisierung
+
+Combat First Responder (cfr) - Soldat mit mittleren Medizinkenntnissen und etwas -Material
+Medic (medic) - Soldat mit besseren Medizinkenntnissen als cfr und mehr -Material
+
+Fireteamlead (ftl) - Soldat, der ein Fireteam führt
+Squadlead (sl) Soldat, der ein Squad führt
+Platoonlead (pl) - Soldat, der ein Platoon führt
+Platoonseargent (ps) - Soldat, der den pl unterstützt
+
+Light Machinegunner (lmg) - Soldat mit leichtem MG (5,56mm - 6,5mm)
+Medium Machinegunner (mmg) - Soldat mit mittlerem MG (7,62mm)
+Assistant Medium Machinegunner (ammg) - trägt Munition für mmg
+Heavy Machinegunner (hmg) - Soldat mit schwerem MG (>7,62mm)
+Assistant Heavy Machinegunner (ahmg) - trägt Munition für hmg
+
+Grenadier (grn) - Soldat mit Unterlaufgranatwerfer
+Explosive Specialist (es) - Soldat, der Spregmittel legen und entschärfen kann
+Engineer (eng) - Soldat, der Fahrzeuge repariert und für Nachschub sorgt
+UAV (uav) - Soldat, der Drohnen kontrollieren kann
+CQ (cq) Soldat, der auf Nahbereichskämpfe spezialisiert ist
+
+Light Anti Tank (lat) - Soldat mit ungelenktem AT-Werfer
+Anti Tank (at) - Soldat mit gelenktem AT-Werfer
+Anti Air (aa) - Soldat mit AA-Werfer
+Ammo Carrier (ac) - Soldat, der Munition für andere trägt
+
+Semi Precision (sp) - Soldat mit Präzisionsgewehr (5,56mm - 6,5mm)
+Designated Marksman (dm) - Soldat mit Präzisionsgewehr (7,62mm)
+Sniper (sniper) - Soldat, der einzelne Prioritätsziele über größere Distanz aufklärt und bekämpft
+Spotter (spotter) - Soldat, der mit einem sniper zusammenarbeitet
+Flanker (flanker) - Soldat, der im Nahbereich unterstützt
+
+Crew (crew) - Fahrzeugbesatzung (Schütze/Fahrer)
+Commander (com) - Soldat, der ein Fahrzeug befehligt
+
+Forward Air Controller (fac) - Soldat, der CAS koordiniert
+Helipilot (helipilot) - Soldat, der Helikopter fliegt
+Helicrew (helicrew) - Helibesatzung (Doorgunner)
+Pilot (pilot) - Soldat, der Flugzeuge fliegt
+
+Mortar (mortar) - Soldat, mit Mörserrohr
+Assitant Mortar (amortar) - Soldat, mit Mörserstandfuß
+
+
+
+
+
+Fraktionen:
+usmc_wood
+usmc_desert
+
+
+
+
+
+Einheit verwenden:
+Entweder man plaziert die entsprechende 1st Einheit im Editor oder man plaziert eine Vanilla Einheit und schreibt folgendes in die initzeile der Einheit:
+[code]
+this setVariable["CODI_LO_class", "rflm_ch_wood"];//um einen schweizer Rifleman zu plazieren
+[/code]
+
+
+
+
+
+Eigene Fraktion implementieren am beispiel der Schweiz mit den 3 Klassen unarmed, rflm, cfr:
+Die Fraktion heißt "ch_wood".
+Jede Fraktion muss die Klasse "unarmed" implementieren.
+Die implementierbaren Klassen stehen in der Doku.
+Überall wo ch_wood steht kann auch etwas anderes stehen (Sonderzeichen generell nicht verwenden, auch " " nicht).
+[glow=blue]ch_wood.sqf:[/glow]
+[code]
+if (isNil "CODI_LO_ch_wood") then
+{
+	CODI_LO_ch_wood = ["unarmed","rflm","cfr"];
+}
+else
+{
+	{
+		if (!(_x in CODI_LO_ch_wood)) then
+		{
+			CODI_LO_ch_wood pushBack _x;
+		};
+	}
+	forEach ["unarmed","rflm","cfr"];
+};
+CODI_LO_ch_wood sort true;//alphabetisch sortieren
+//die Fraktion dem Ausrüstungskladderadatsch hinzufügen
+if (isNil "CODI_LO_colours") then
+{
+	CODI_LO_colours = ["ch_wood"];
+}
+else
+{
+	{
+		if (!(_x in CODI_LO_colours)) then
+		{
+			CODI_LO_colours pushBack _x;
+		};
+	}
+	forEach ["ch_wood"];
+};
+CODI_LO_fnc_unarmed_ch_wood = {
+	CODI_LO_uniform = ["MNP_CombatUniform_Ireland"];
+	CODI_LO_vest = ["MNP_Vest_Ireland"];
+	CODI_LO_backpack = ["B_Carryall_oli"];
+	CODI_LO_helmet = ["MNP_Helmet_Ireland"];
+	CODI_LO_nv = ["NVGoggles_INDEP","NVGoggles"];//Soldat wird standardmäßig mit "NVGoggles_INDEP" ausgerüstet, hat im Virtual Arsenal die Option auch "NVGoggles" auszuwählen
+};
+CODI_LO_fnc_rflm_ch_wood = {
+	call CODI_LO_fnc_unarmed_ch_wood;//dadurch sieht der rflm_ch_wood aus wie der unarmed_ch_wood
+	CODI_LO_weaponPacks = [["fnx45","p99"],["grenades_he","grenades_flash","grenades_smoke"],["m4","bushmaster_300"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
+};
+CODI_LO_fnc_cfr_ch_wood = {
+	call CODI_LO_fnc_rflm_ch_wood;//dadurch sieht der cfr_ch_wood aus wie der rflm_ch_wood und hat dessen Waffenauswahl
+};
+[/code]
+Dies alles speichert man in einer Datei ch_wood.sqf und schreibt in die init.sqf noch folgendes (wenn datei nicht vorhanden, entsprechende Zeile löschen):
+[code]
+call compile preprocessFileLineNumbers "ch_wood.sqf";
+call compile preprocessFileLineNumbers "classes.sqf";
+call compile preprocessFileLineNumbers "weapons.sqf";
+[/code]
+
+
+
+
+
+Eigene Klasse definieren und verwenden:
+[glow=blue]ch_wood.sqf:[/glow]
+[code]
+if (isNil "CODI_LO_ch_wood") then
+{
+	CODI_LO_ch_wood = ["iamspecial"];
+}
+else
+{
+	{
+		if (!(_x in CODI_LO_ch_wood)) then
+		{
+			CODI_LO_ch_wood pushBack _x;
+		};
+	}
+	forEach ["iamspecial"];
+};
+CODI_LO_ch_wood sort true;//alphabetisch sortieren
+CODI_LO_fnc_iamspecial_ch_wood = {
+	call CODI_LO_fnc_rflm_ch_wood;
+};
+[/code]
+[glow=blue]classes.sqf:[/glow]
+[code]
+CODI_LO_fnc_iamspecial = {
+	call CODI_LO_fnc_rflm;
+};
+[/code]
+
+
+
+
+
+Eigenes Waffenpaket definieren am Beispiel der mxsw:
+[glow=blue]weapons.sqf[/glow]
+[code]
+CODI_LO_fnc_mxsw = {
+	["100Rnd_65x39_caseless_mag_Tracer", 6] call CODI_LO_fnc_addBackpackMagazine;
+	["100Rnd_65x39_caseless_mag_Tracer", 3] call CODI_LO_fnc_addVestMagazine;
+	CODI_LO_primaryWeapon = ["arifle_MX_SW_Black_F"];
+	CODI_LO_primaryWeaponSilencer = ["muzzle_snds_H"];
+	CODI_LO_primaryWeaponLaser = ["acc_pointer_IR"];
+	CODI_LO_primaryWeaponBipod = ["bipod_01_F_blk"];
+	CODI_LO_primaryWeaponOptic = ["optic_MRCO"];
+};
+[/code]
+Der Name der Waffe wäre dann CODI_LO_fnc_mxsw ohne CODI_LO_fnc_ also mxsw.
+
+
+
+
+
+Wenn eine Fraktion/Klasse ins Repo mit aufgenommen werden soll, werden noch 2 weitere Codesnippets benötigt.
+Die Grundklasse CODI_LO_unarmed_ch_wood definiert alles mögliche. Alle anderen Klassen erben dann davon und fügen nur noch minimale Änderungen hinzu.
+[glow=blue]ch_wood.hpp:[/glow]
+[code]
+class CODI_LO_unarmed_ch_wood : B_Soldier_F
+{
+	side = 1;//0=opfor, 1=blufor, 2=independent, 3=civilian
+	scope = 2;
+	vehicleClass = "CODI_Infantry";
+	author = "Coding";//author
+	displayName = "unarmed";//anzeigenahme
+	faction = "CODI_LO_usmc_wood";//faction
+	weapons[] = {"Throw","Put"};
+	respawnWeapons[] = {"Throw","Put"};
+	items[] = {};
+	respawnItems[] = {};
+	magazines[] = {};
+	respawnMagazines[] = {};
+	linkedItems[] = {};
+	respawnLinkedItems[] = {};
+	uniformClass = "U_BasicBody";
+};
+class CODI_LO_rflm_ch_wood : CODI_LO_unarmed_ch_wood
+{
+	displayName = "rflm";
+};
+class CODI_LO_cfr_ch_wood : CODI_LO_unarmed_ch_wood
+{
+	displayName = "cfr";
+};
+[/code]
+[glow=blue]faction.hpp:[/glow]
+[code]
+class CODI_LO_ch_wood
+{
+	displayName = "1st ch_wood";
+	priority = 100;
+	icon = "";
+	side = 1;//0=opfor, 1=blufor, 2=independent, 3=civilian
+};
+[/code]
