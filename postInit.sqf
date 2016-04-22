@@ -116,7 +116,7 @@ if (hasInterface) then
 				_heartRate = player getVariable ["ace_medical_heartRate", 80];
 				_bloodPressure = player getVariable ["ace_medical_bloodPressure", [80, 120]];
 				_pain = player getVariable ["ace_medical_pain", 0];
-				_painSuppress = _unit getVariable ["ace_medical_painSuppress", 0];
+				_painSuppress = player getVariable ["ace_medical_painSuppress", 0];
 				if (_heartRate == 0 && (_bloodPressure select 1) >= 100 && (_pain <= 0.7 || _painSuppress > _pain)) then
 				{
 					_heartRate = 30 + random(20);
@@ -129,7 +129,6 @@ if (hasInterface) then
 			};
 		};
 	};
-					player setVariable["ACE_isUnconscious", false];
 	
 	//workaround for fatigue
 	if (!CODI_LO_vanillaFatigue) then
