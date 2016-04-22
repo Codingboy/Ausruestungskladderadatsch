@@ -3,7 +3,7 @@
 /*
 if (hasInterface) then
 {
-	waitUntil{!isNull player}
+	waitUntil{!isNull player};
 	_resolved = [player] call CODI_LO_fnc_resolveClass;
 	_class = _resolved select 0;//rflm
 	_colour = _resolved select 1;//usmc_wood
