@@ -201,6 +201,7 @@ CODI_LO_fnc_pl_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;
 	CODI_LO_helmet = ["H_Beret_02"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 };
 CODI_LO_fnc_ps_usmc_desert = {
 	call CODI_LO_fnc_pl_usmc_desert;

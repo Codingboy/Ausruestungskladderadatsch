@@ -201,6 +201,7 @@ CODI_LO_fnc_sp_usmc_wood = {
 CODI_LO_fnc_pl_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
 	CODI_LO_helmet = ["H_Beret_02"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_ps_usmc_wood = {
