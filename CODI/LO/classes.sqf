@@ -8,11 +8,8 @@ CODI_LO_fnc_unarmed = {
 	["ACE_EarPlugs"] call CODI_LO_fnc_addUniformItem;
 	if (ace_medical_level == 2) then
 	{
-		["ACE_quikclot", 10] call CODI_LO_fnc_addUniformItem;
-		["ACE_morphine", 5] call CODI_LO_fnc_addUniformItem;
-		["ACE_epinephrine", 2] call CODI_LO_fnc_addUniformItem;
-		["ACE_elasticBandage", 5] call CODI_LO_fnc_addUniformItem;
-		["ACE_packingBandage", 5] call CODI_LO_fnc_addUniformItem;
+		["ACE_fieldDressing", 14] call CODI_LO_fnc_addUniformItem;
+		["ACE_morphine", 2] call CODI_LO_fnc_addUniformItem;
 		["ACE_tourniquet", 1] call CODI_LO_fnc_addUniformItem;
 	}
 	else
