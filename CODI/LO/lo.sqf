@@ -466,7 +466,7 @@ CODI_LO_fnc_addMagazinesToBox = {
 	{
 		_magazines = _x;
 		{
-			_box addMagazineCargoGlobal _x;
+			_box addMagazineCargoGlobal [_x, 1];
 		}
 		forEach _magazines;
 	}
