@@ -265,6 +265,10 @@ CODI_Medical_fnc_medicMonitor = {
 	{
 		sleep 1;
 		_unconscious = _unit getVariable ["ACE_isUnconscious", false] || _unit getVariable ["ace_medical_inCardiacArrest", false];
+		if (!_unconscious && _unconsciousPrev) then
+		{
+			hintSilent "";
+		};
 		if (_unconscious) then
 		{
 			[_unit, !_unconsciousPrev] call CODI_Medical_fnc_medicHint;
