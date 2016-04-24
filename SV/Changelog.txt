@@ -1,0 +1,11 @@
+24.04.16
+#weapon.sqf (
++PMM
++MP443
++AKM
++AKM GL
+)
++folder: SV
++Changelog.txt
++rus_emr.hpp
++rus_emr.sqf

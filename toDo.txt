@@ -1,2 +1,42 @@
-@SV 	Liste erstellen                  X
-	SourceTree lernen
+PMC
+/*
+Uniformen
+this forceAddUniform "LOP_U_PMC_Fatigue_01";
+this forceAddUniform "LOP_U_PMC_Fatigue_02";
+this forceAddUniform "LOP_U_PMC_Fatigue_03";
+this forceAddUniform "LOP_U_PMC_Fatigue_04";
+this addVest "V_PlateCarrier1_blk";
+
+
+
+Kopfbedeckungen
+this addHeadgear "BWA3_OpsCore_Fleck_Patch";
+this addHeadgear "rhsusf_bowman_cap";
+this addHeadgear "H_Cap_headphones";
+this addHeadgear "H_Cap_grn_BI";
+this addHeadgear "H_Cap_tan_specops_US";
+
+
+Pistolen
+this addWeapon "hgun_ACPC2_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+
+Waffen Soldat
+this addWeapon "hlc_rifle_M4";
+this addWeapon "hlc_rifle_bcmjack";
+
+Waffen DM
+this addWeapon "rhs_weap_m14ebrri";
+this addWeapon "srifle_DMR_03_F";
+
+Waffen Sniper
+this addWeapon "hlc_rifle_awmagnum_BL";
+this addWeapon "srifle_LRR_F";
+
+Waffen Stealth
+this addWeapon "hlc_rifle_honeybadger";
+this addPrimaryWeaponItem "muzzle_HBADGER";
+
+this addWeapon "hlc_smg_mp5sd6";
+
+*/
