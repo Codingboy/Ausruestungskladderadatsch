@@ -88,6 +88,7 @@ call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\usmc_wood.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\usmc_desert.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\bw_fleck.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\bw_tropen.sqf";
+call compile preprocessFileLineNumbers "\1st_Core\SV\rus_emr.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\weapons.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\Medical\init.sqf";
 CODI_LO_preInited = true;

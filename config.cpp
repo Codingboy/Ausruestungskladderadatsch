@@ -126,6 +126,7 @@ class CfgVehicles
 	#include "CODI\LO\usmc_desert.hpp"
 	#include "CODI\LO\bw_fleck.hpp"
 	#include "CODI\LO\bw_tropen.hpp"
+	#include "CODI\LO\rus_emr.hpp"
 };
 
 class CfgFactionClasses
@@ -154,6 +155,13 @@ class CfgFactionClasses
 	class CODI_LO_bw_tropen
 	{
 		displayName = "1st bw_tropen";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_rus_emr
+	{
+		displayName = "1st rus_emr";
 		priority = 100;
 		icon = "";
 		side = 1;
