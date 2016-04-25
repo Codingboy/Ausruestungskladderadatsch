@@ -169,7 +169,6 @@ CODI_LO_fnc_flanker_rus_emr = {
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 	CODI_LO_uniform = ["rhs_uniform_gorka_r_y","rhs_uniform_gorka_r_g"];
 	};
-};
 CODI_LO_fnc_sniper_rus_emr = {
 	call CODI_LO_fnc_flanker_rus_emr;
 	/*if (332350 in (getDLCs 1)) then
