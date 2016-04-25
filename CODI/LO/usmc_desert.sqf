@@ -28,15 +28,15 @@ else
 	forEach ["usmc_desert"];
 };
 CODI_LO_fnc_unarmed_usmc_desert = {
-	CODI_LO_uniform = ["rhs_uniform_FROG01_d"];
-	CODI_LO_vest = ["rhsusf_spc"];
+	CODI_LO_uniform = ["rhs_uniform_FROG01_d","MNP_CombatUniform_USMC_D"];
+	CODI_LO_vest = ["rhsusf_spc","MNP_Vest_USMC_2"];
 	CODI_LO_backpack = ["rhsusf_assault_eagleaiii_coy"];
-	CODI_LO_helmet = ["rhsusf_mich_helmet_marpatd"];
+	CODI_LO_helmet = ["rhsusf_mich_helmet_marpatd","MNP_Helmet_USMC_D"];
 	CODI_LO_nv = ["NVGoggles"];
 };
 CODI_LO_fnc_rflm_usmc_desert = {
 	call CODI_LO_fnc_unarmed_usmc_desert;
-	CODI_LO_vest = ["rhsusf_spc_rifleman"];
+	CODI_LO_vest = ["rhsusf_spc_rifleman","MNP_Vest_USMC_2"];
 	CODI_LO_weaponPacks = [["fnx45","p99"],["grenades_he","grenades_flash","grenades_smoke"],["m4","lar15"],[]];
 };
 CODI_LO_fnc_cfr_usmc_desert = {
