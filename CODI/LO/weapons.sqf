@@ -249,15 +249,21 @@ CODI_LO_fnc_mp5 = {
 CODI_LO_fnc_nlaw = {
 	CODI_LO_launcher = ["launch_NLAW_F"];
 };
+CODI_LO_fnc_pzf3 = {
+	CODI_LO_launcher = ["BWA3_Pzf3"];
+	CODI_LO_launcherOptic = ["BWA3_optic_NSA80"];
+};
 CODI_LO_fnc_titan_at = {
-	["Titan_AT", 2] call CODI_LO_fnc_addBackpackMagazine;
+	["Titan_AT", 1] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_launcherMagazines = ["Titan_AT"];
 	CODI_LO_launcher = ["launch_B_Titan_short_F"];
 };
 CODI_LO_fnc_titan_at_ammo = {
 	["Titan_AT", 3] call CODI_LO_fnc_addBackpackMagazine;
 };
 CODI_LO_fnc_titan_aa = {
-	["Titan_AA", 2] call CODI_LO_fnc_addBackpackMagazine;
+	["Titan_AA", 1] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_launcherMagazines = ["Titan_AA"];
 	CODI_LO_launcher = ["launch_B_Titan_F"];
 };
 CODI_LO_fnc_titan_aa_ammo = {
