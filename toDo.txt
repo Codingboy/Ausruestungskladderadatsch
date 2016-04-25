@@ -41,4 +41,5 @@ this addWeapon "hlc_smg_mp5sd6";
 
 */
 
-ausrüstungskisten munition uns spezialmunitionen funktionieren nur mit zeus garantiert
+ausrüstungskisten munition und spezialmunitionen funktionieren nur mit zeus garantiert
+add pzf3
