@@ -16,8 +16,8 @@ if (hasInterface) then
 */
 CODI_LO_equipUnarmed = false;//false=einheit wird fertig ausgerüstet, true=einheit wird unbewaffnet ausgerüstet
 CODI_LO_customEquip = false;//false=einheit wird normal ausgerüstet, true=einheit wird nicht ausgerüstet
-CODI_LO_restrictedClass = false;//false=keine einschränkung der Klassen, true=einheit kann nur die gewählte Klasse spielen
-CODI_LO_restrictedColours = ["usmc_wood","usmc_desert"];//einschränkung der wählbaren Fraktionen/Tarnfarben
+CODI_LO_restrictedClass = true;//false=keine einschränkung der Klassen, true=einheit kann nur die gewählte Klasse spielen
+//CODI_LO_restrictedColours = ["usmc_wood","usmc_desert"];//einschränkung der wählbaren Fraktionen/Tarnfarben   default: plazierte Fraktion
 CODI_LO_equipOnRespawn = true;//einheit wird bei respawn neu ausgerüstet   default: true
 CODI_LO_noShotsAtMissionEnd = true;//einheit bekommt bei missionsende alle waffen und items abgenommen   default: true
 CODI_LO_setCallsigns = true;//Callsigns werden automatisch benannt falls die einheiten nach dem Schame "Alpha - FTL" benannt wurden   default: false
