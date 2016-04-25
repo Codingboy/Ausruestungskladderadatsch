@@ -15,7 +15,17 @@
 +SVD
 +SVDM Camo
 +SVDS
+
++AKS-74u
++AKS-74u MTK(M1913 Rail)
++AK-12u
++Igla
++Igla Ammo
++RPG-7 
++RPG-7 Ammo
++RPG-26
 )
+
 
 24.04.16
 #weapon.sqf (
