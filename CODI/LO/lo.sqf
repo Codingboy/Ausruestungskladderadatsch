@@ -200,15 +200,6 @@ CODI_LO_fnc_whitelistArsenal = {
 			_weaponPack = _x;
 			call CODI_LO_fnc_clearWeaponLoadout;
 			call compile format["[player] call CODI_LO_fnc_%1;", _weaponPack];
-		}
-		forEach _weaponPacks;
-	}
-	forEach CODI_LO_weaponPacks;
-	for "_i" from 0 to (4-1) do
-	{
-		if (count(CODI_LO_weaponPacks select _i) > 0) then
-		{
-			call compile format["[player] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select (floor(random(count(CODI_LO_weaponPacks select _i))))];
 			if (!isNil "CODI_LO_postWeaponLoadout") then
 			{
 				[player] call CODI_LO_postWeaponLoadout;
@@ -234,8 +225,10 @@ CODI_LO_fnc_whitelistArsenal = {
 			[missionnamespace, CODI_LO_launcherSilencer] call BIS_fnc_addVirtualItemCargo;
 			[missionnamespace, CODI_LO_launcherOptic] call BIS_fnc_addVirtualItemCargo;
 			[missionnamespace, CODI_LO_launcherBipod] call BIS_fnc_addVirtualItemCargo;
-		};
-	};
+		}
+		forEach _weaponPacks;
+	}
+	forEach CODI_LO_weaponPacks;
 };
 CODI_LO_fnc_clearLoadout = {
 	CODI_LO_uniform = [];
