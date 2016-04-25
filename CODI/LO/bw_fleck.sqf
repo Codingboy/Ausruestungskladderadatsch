@@ -40,10 +40,11 @@ CODI_LO_fnc_rflm_bw_fleck = {
 };
 CODI_LO_fnc_cfr_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
+	CODI_LO_backpack = ["BWA3_Kitbag_Fleck_Medic"];
 };
 CODI_LO_fnc_medic_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
-	CODI_LO_backpack = ["BWA3_Carryall_Fleck"];
+	CODI_LO_backpack = ["BWA3_Kitbag_Fleck_Medic"];
 };
 CODI_LO_fnc_ftl_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
@@ -68,7 +69,7 @@ CODI_LO_fnc_hmg_bw_fleck = {
 };
 CODI_LO_fnc_grn_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
-	CODI_LO_weaponPacks set [2, ["g36_gl","g36_gl"]];
+	CODI_LO_weaponPacks set [2, ["g36_gl","g3_gl"]];
 };
 CODI_LO_fnc_eng_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
