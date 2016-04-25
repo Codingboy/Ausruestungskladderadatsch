@@ -1,3 +1,22 @@
+25.04.16
+#weapon.sqf (
++AK-74M MTK(M1913 Rail)
++AK-74M
++AK-74M GL
++AK-74M GL FTL
++AK-12 GL FTL
++AKM GL FTL
++PKP
++RPK-74
++RPK-12
++SVDS NPZ
++SVDM NPZ
++SVDM Camo NPZ
++SVD
++SVDM Camo
++SVDS
+)
+
 24.04.16
 #weapon.sqf (
 +PMM
