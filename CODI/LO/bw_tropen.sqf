@@ -55,12 +55,12 @@ CODI_LO_fnc_ftl_bw_tropen = {
 CODI_LO_fnc_lmg_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
 	CODI_LO_backpack = ["BWA3_Carryall_Tropen"];
-	CODI_LO_weaponPacks set [2, ["m249"]];
+	CODI_LO_weaponPacks set [2, ["mg4"]];
 };
 CODI_LO_fnc_mmg_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
 	CODI_LO_backpack = ["BWA3_Carryall_Tropen"];
-	CODI_LO_weaponPacks set [2, ["m60"]];
+	CODI_LO_weaponPacks set [2, ["mg5"]];
 };
 CODI_LO_fnc_hmg_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;

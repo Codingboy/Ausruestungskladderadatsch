@@ -4,7 +4,7 @@ class CODI_LO_unarmed_usmc_wood : B_Soldier_F
 	scope = 2;
 	vehicleClass = "CODI_Infantry";
 	author = "Coding";//author
-	displayName = "unarmed";//anzeigenahme
+	displayName = "unarmed";//anzeigename
 	faction = "CODI_LO_usmc_wood";//faction
 	weapons[] = {"Throw","Put"};
 	respawnWeapons[] = {"Throw","Put"};
