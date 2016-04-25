@@ -126,7 +126,7 @@ class CfgVehicles
 	#include "CODI\LO\usmc_desert.hpp"
 	#include "CODI\LO\bw_fleck.hpp"
 	#include "CODI\LO\bw_tropen.hpp"
-	#include "CODI\LO\rus_emr.hpp"
+	#include "SV\rus_emr.hpp"
 };
 
 class CfgFactionClasses
