@@ -146,6 +146,7 @@ CODI_LO_fnc_helicrew_usmc_desert = {
 	["SmokeShellGreen", 2] call CODI_LO_fnc_addUniformItem;
 	["11Rnd_45ACP_Mag", 2] call CODI_LO_fnc_addUniformItem;
 	["ACE_IR_Strobe_Item", 1] call CODI_LO_fnc_addUniformItem;
+	CODI_LO_weaponPacks set [1, []];
 	CODI_LO_weaponPacks set [2, []];
 	CODI_LO_weaponPacks set [0, ["fnx45_pilot","p99_pilot"]];
 };
