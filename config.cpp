@@ -125,6 +125,7 @@ class CfgVehicles
 	#include "CODI\LO\usmc_wood.hpp"
 	#include "CODI\LO\usmc_desert.hpp"
 	#include "CODI\LO\bw_fleck.hpp"
+	#include "CODI\LO\bw_tropen.hpp"
 };
 
 class CfgFactionClasses
@@ -146,6 +147,13 @@ class CfgFactionClasses
 	class CODI_LO_bw_fleck
 	{
 		displayName = "1st bw_fleck";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_bw_tropen
+	{
+		displayName = "1st bw_tropen";
 		priority = 100;
 		icon = "";
 		side = 1;
