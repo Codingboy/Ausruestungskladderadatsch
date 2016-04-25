@@ -42,4 +42,5 @@ this addWeapon "hlc_smg_mp5sd6";
 */
 
 ausrüstungskisten munition und spezialmunitionen funktionieren nur mit zeus garantiert
-add pzf3
+waffen im arsenal teilweise nicht verfügbar
+helicrew uscm, bw überarbeiten
