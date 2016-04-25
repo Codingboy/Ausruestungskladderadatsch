@@ -163,7 +163,7 @@ if (hasInterface) then
 	};
 	if (player getVariable["CODI_LO_Admin", false] || (getPlayerUID player) in ["_SP_PLAYER_","76561197996296785"] || serverCommandAvailable "#kick") then
 	{
-		[[player],"CODI_LO_fnc_becomeZeus",false,false] spawn BIS_fnc_MP;
+		//[[player],"CODI_LO_fnc_becomeZeus",false,false] spawn BIS_fnc_MP;
 	};
 };
 //[] execVM "\1st_Core\CSSA3\CSSA3_init.sqf";

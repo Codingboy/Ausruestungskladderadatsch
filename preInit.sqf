@@ -49,7 +49,6 @@ CODI_LO_fnc_becomeZeus = {
 	_unit = _this select 0;
 	_uid = getPlayerUID _unit;
 	_playerString = format ["NSS_AC_Admin_%1", _uid];
-	_playerCuratorModule = format ["NSS_AC_Curator_%1", _uid];
 	call compile format ['
 		if (isNil "NSS_AC_Curator_%1") then
 		{
