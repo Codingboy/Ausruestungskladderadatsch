@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_rus_emr") then
 {
-   CODI_LO_rus_emr = ["unarmed","rflm","cfr"];
+   CODI_LO_rus_emr = ["unarmed","rflm","cfr","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
          CODI_LO_rus_emr pushBack _x;
       };
    }
-   forEach ["unarmed","rflm","cfr"];
+   forEach ["unarmed","rflm","cfr","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
 };
 CODI_LO_rus_emr sort true;//alphabetisch sortieren
 //die Fraktion dem Ausrüstungskladderadatsch hinzufügen
@@ -50,7 +50,7 @@ CODI_LO_fnc_ftl_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
 	CODI_LO_backpack = ["B_Carryall_oli"];
 	CODI_LO_weaponPacks set [2, ["akm_gl_ftl","ak74m_gl_ftl","ak12_gl_ftl"]];
-	["ACE_key_east"] call CODI_LO_fnc_addUniformItem;
+	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_lmg_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
@@ -61,11 +61,6 @@ CODI_LO_fnc_mmg_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
 	CODI_LO_backpack = ["B_Carryall_oli"];
 	CODI_LO_weaponPacks set [2, ["pkp"]];
-};
-CODI_LO_fnc_hmg_rus_emr = {
-	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [2, ["hk121","lwmmg"]];
 };
 CODI_LO_fnc_grn_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
@@ -90,8 +85,8 @@ CODI_LO_fnc_dm_rus_emr = {
 CODI_LO_fnc_crew_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
 	CODI_LO_backpack = [];
-	CODI_LO_helmet = ["H_HelmetCrew_B"];
-	CODI_LO_weaponPacks set [2, ["mp5"]];
+	CODI_LO_helmet = ["rhs_tsh4","rhs_tsh4_ess","rhs_tsh4_ess_bala"];
+	CODI_LO_weaponPacks set [2, ["aks74u","aks74umtk","ak12u"]];
 };
 CODI_LO_fnc_com_rus_emr = {
 	call CODI_LO_fnc_crew_rus_emr;
@@ -105,34 +100,34 @@ CODI_LO_fnc_sl_rus_emr = {
 };
 CODI_LO_fnc_cq_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_weaponPacks set [2, ["hk53"]];
+	CODI_LO_weaponPacks set [2, ["aks74u","aks74umtk","ak12u"]];
 };
 CODI_LO_fnc_mortar_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Mortar_01_weapon_F"];
+	CODI_LO_backpack = ["RHS_Podnos_Gun_Bag"];
 };
 CODI_LO_fnc_amortar_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Mortar_01_support_F"];
+	CODI_LO_backpack = ["RHS_Podnos_Bipod_Bag"];
 };
 CODI_LO_fnc_pilot_rus_emr = {
 	call CODI_LO_fnc_helicrew_rus_emr;
 	CODI_LO_backpack = ["B_Parachute"];
-	CODI_LO_uniform = ["U_B_PilotCoveralls"];
-	CODI_LO_helmet = ["H_PilotHelmetFighter_B"];
+	CODI_LO_uniform = ["rhs_uniform_df15"];
+	CODI_LO_helmet = ["rhs_zsh7a"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_helipilot_rus_emr = {
 	call CODI_LO_fnc_helicrew_rus_emr;
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
-	CODI_LO_uniform = ["U_B_HeliPilotCoveralls"];
-	CODI_LO_helmet = ["H_PilotHelmetHeli_B"];
+	CODI_LO_uniform = ["rhs_uniform_m88_patchless"];
+	CODI_LO_helmet = ["rhs_gssh18"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_helicrew_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = [""];
-	CODI_LO_vest = [""];
+	CODI_LO_backpack = ["rhs_sidor"];
+	CODI_LO_vest = ["rhs_vydra_3m"];
 	CODI_LO_helmet = ["H_CrewHelmetHeli_B"];
 	CODI_LO_uniformItems = [];
 	CODI_LO_vestItems = [];
@@ -145,41 +140,34 @@ CODI_LO_fnc_helicrew_rus_emr = {
 	["CODI_BFT_Tablet"] call CODI_LO_fnc_addUniformItem;
 	["ACE_HandFlare_Green", 2] call CODI_LO_fnc_addUniformItem;
 	["SmokeShellGreen", 2] call CODI_LO_fnc_addUniformItem;
-	["11Rnd_45ACP_Mag", 2] call CODI_LO_fnc_addUniformItem;
 	["ACE_IR_Strobe_Item", 1] call CODI_LO_fnc_addUniformItem;
 	CODI_LO_weaponPacks set [1, []];
 	CODI_LO_weaponPacks set [2, []];
-	CODI_LO_weaponPacks set [0, ["fnx45_pilot","p99_pilot"]];
+	CODI_LO_weaponPacks set [0, ["pmm","mp443"]];
 };
 CODI_LO_fnc_ac_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [3, ["hk121_ammo","lwmmg_ammo","titan_at_ammo","titan_aa_ammo"]];
+	CODI_LO_backpack = ["B_Carryall_oli"];
+	CODI_LO_weaponPacks set [3, ["rpg7_ammo","igla_ammo"]];
 };
 CODI_LO_fnc_lat_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_weaponPacks set [3, ["nlaw"]];
+	CODI_LO_weaponPacks set [3, ["rpg26"]];
 };
 CODI_LO_fnc_at_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [3, ["titan_at"]];
+	CODI_LO_backpack = ["rhs_rpg_empty"];
+	CODI_LO_weaponPacks set [3, ["rpg7"]];
 };
 CODI_LO_fnc_aa_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [3, ["titan_aa"]];
+	CODI_LO_backpack = ["B_Carryall_oli"];
+	CODI_LO_weaponPacks set [3, ["igla"]];
 };
 CODI_LO_fnc_flanker_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
-	if (332350 in (getDLCs 1)) then
-	{
-		CODI_LO_uniform = ["U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_B_GhillieSuit"];
-	}
-	else
-	{
-		CODI_LO_uniform = ["U_B_GhillieSuit"];
+	CODI_LO_uniform = ["rhs_uniform_gorka_r_y","rhs_uniform_gorka_r_g"];
 	};
 };
 CODI_LO_fnc_sniper_rus_emr = {
@@ -195,23 +183,13 @@ CODI_LO_fnc_spotter_rus_emr = {
 	call CODI_LO_fnc_flanker_rus_emr;
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
-CODI_LO_fnc_sp_rus_emr = {
-	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_weaponPacks set [2, ["lar15_sp"]];
-};
 CODI_LO_fnc_pl_rus_emr = {
 	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_helmet = ["H_Beret_02"];
+	CODI_LO_helmet = ["rhs_fieldcap_helm_digi"];
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_ps_rus_emr = {
 	call CODI_LO_fnc_pl_rus_emr;
-	CODI_LO_helmet = ["H_Beret_blk"];
-};
-CODI_LO_fnc_fac_rus_emr = {
-	call CODI_LO_fnc_rflm_rus_emr;
-	CODI_LO_weaponPacks set [2, ["m4_gl_fac"]];
-	CODI_LO_binocular = ["Laserdesignator"];
-	CODI_LO_binocularAmmo = ["Laserbatteries"];
+	CODI_LO_helmet = ["LOP_H_Cowboy_hat"];
 };
