@@ -166,4 +166,4 @@ if (hasInterface) then
 		[[player],"CODI_LO_fnc_becomeZeus",false,false] spawn BIS_fnc_MP;
 	};
 };
-[] execVM "\1st_Core\CSSA3\CSSA3_init.sqf";
+//[] execVM "\1st_Core\CSSA3\CSSA3_init.sqf";

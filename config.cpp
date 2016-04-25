@@ -15,7 +15,7 @@ class CfgPatches
 
 #include "CODI\Dialogs.hpp"
 #include "CODI\LO\Dialogs.hpp"
-#include "CSSA3\CSSA3_header.hpp"
+//#include "CSSA3\CSSA3_header.hpp"
 #include "CHVD\dialog.hpp"
 class CfgFunctions
 {
