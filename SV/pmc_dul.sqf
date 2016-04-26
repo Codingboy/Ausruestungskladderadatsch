@@ -32,13 +32,13 @@ CODI_LO_fnc_unarmed_pmc_dul = {
    CODI_LO_uniform = ["LOP_U_PMC_Fatigue_01","LOP_U_PMC_Fatigue_03","LOP_U_PMC_Fatigue_04"];
    CODI_LO_vest = ["V_PlateCarrier1_blk"];
    CODI_LO_backpack = ["rhs_assault_umbts","rhsusf_assault_eagleaiii_coy"];
-   CODI_LO_helmet = ["BWA3_OpsCore_Fleck_Patch","rhsusf_bowman_cap","H_Cap_headphones","H_Cap_grn_BI","H_Cap_tan_specops_US"];
+   CODI_LO_helmet = ["rhsusf_opscore_rg_cover_pelt","rhsusf_bowman_cap","H_Cap_headphones","H_Cap_grn_BI","H_Cap_tan_specops_US"];
    CODI_LO_nv = ["NVGoggles_INDEP","NVGoggles"];//Soldat wird standardmäßig mit "NVGoggles_INDEP" ausgerüstet, hat im Virtual Arsenal die Option auch "NVGoggles" auszuwählen
 };
 CODI_LO_fnc_rflm_pmc_dul = {
    call CODI_LO_fnc_unarmed_pmc_dul;//dadurch sieht der rflm_ch_wood aus wie der unarmed_ch_wood
    CODI_LO_vest = ["V_PlateCarrier1_blk"];
-   CODI_LO_helmet = ["rhs_fieldcap_helm_digi","rhs_6b27m_digi","rhs_6b27m_digi_bala","rhs_6b27m_digi_ess","rhs_6b27m_digi_ess_bala"];
+   CODI_LO_helmet = ["rhsusf_opscore_rg_cover_pelt","rhsusf_bowman_cap","H_Cap_headphones","H_Cap_grn_BI","H_Cap_tan_specops_US"];
    CODI_LO_weaponPacks = [["glock17","acpc2","fnx45"],["grenades_he","grenades_flash","grenades_smoke"],["auga1","akm","bcmjack","m4","f2000","rk62","tar21","fal","hk33"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
 };
 CODI_LO_fnc_cfr_pmc_dul = {
