@@ -373,7 +373,8 @@ CODI_LO_fnc_resolveClass = {
 	_ret
 };
 CODI_LO_fnc_initialEquip = {
-	private["_equipUnarmed","_fnc","_customEquip","_resolved"];
+	private["_equipUnarmed","_fnc","_customEquip","_resolved","_unit"];
+	_unit = param [0, player];
 	call CODI_LO_fnc_clearLoadout;
 	call CODI_LO_fnc_clearWeaponLoadout;
 	_equipUnarmed = false;
@@ -381,14 +382,14 @@ CODI_LO_fnc_initialEquip = {
 	{
 		_equipUnarmed = CODI_LO_equipUnarmed;
 	};
-	_equipUnarmed = player getVariable["CODI_LO_equipUnarmed", _equipUnarmed];
+	_equipUnarmed = _unit getVariable["CODI_LO_equipUnarmed", _equipUnarmed];
 	_customEquip = false;
 	if (!isNil "CODI_LO_customEquip") then
 	{
 		_customEquip = CODI_LO_customEquip;
 	};
-	_customEquip = player getVariable["CODI_LO_customEquip", _customEquip];
-	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_customEquip = _unit getVariable["CODI_LO_customEquip", _customEquip];
+	_resolved = [_unit] call CODI_LO_fnc_resolveClass;
 	_fnc = "CODI_LO_fnc_" + (_resolved select 0);
 	if (_equipUnarmed) then
 	{
@@ -396,26 +397,26 @@ CODI_LO_fnc_initialEquip = {
 	};
 	if (!_customEquip) then
 	{
-		call compile format["[player] call %1;", _fnc];
+		call compile format["[_unit] call %1;", _fnc];
 		_fnc = _fnc + "_" + (_resolved select 1);
-		call compile format["[player] call %1;", _fnc];
+		call compile format["[_unit] call %1;", _fnc];
 		if (!isNil "CODI_LO_postLoadout") then
 		{
-			[player] call CODI_LO_postLoadout;
+			[_unit] call CODI_LO_postLoadout;
 		};
 		for "_i" from 0 to (4-1) do
 		{
 			if (count(CODI_LO_weaponPacks select _i) > 0) then
 			{
-				call compile format["[player] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select (floor(random(count(CODI_LO_weaponPacks select _i))))];
+				call compile format["[_unit] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select (floor(random(count(CODI_LO_weaponPacks select _i))))];
 			};
 		};
 		if (!isNil "CODI_LO_postWeaponLoadout") then
 		{
-			[player] call CODI_LO_postWeaponLoadout;
+			[_unit] call CODI_LO_postWeaponLoadout;
 		};
 	};
-	[player] call CODI_LO_fnc_equip;
+	[_unit] call CODI_LO_fnc_equip;
 };
 CODI_LO_fnc_guiEquip = {
 	_colour = lbText[2100, lbCurSel 2100];
