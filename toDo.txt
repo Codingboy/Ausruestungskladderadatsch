@@ -1,3 +1,4 @@
 ausrüstungskisten munition und spezialmunitionen funktionieren nur mit zeus garantiert
 helicrew usmc, bw überarbeiten
 funktion addMagazine
+onEquip whitelist arsenal
