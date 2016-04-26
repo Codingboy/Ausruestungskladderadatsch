@@ -1,3 +1,28 @@
+26.04.2016
+#rus_emr.sqf switched vestItems to backpack
+#weapon.sqf (
++grenades he, flash and smoke backpack variants
++Glock 17
++ACPC2
++BCM Jack
++RK62
++HK33
+aug now auga3
+aug_gl now auga3_gl
++AUG A1
+mp5 now mp510
++MP5SD6
++AAC Honeybadger
+)
+#usmc_desert.sqf mp5 to mp510
+#usmc_wood.sqf mp5 to mp510
+#bw_fleck.sqf mp5 to mp510
+#bw_tropen.sqf mp5 to mp510
++pmc_dul.sqf
++pmc_dul.hpp
+implemented pmc_dul
+#rus_emr.hpp author to SV-97
+
 25.04.16
 #weapon.sqf (
 +AK-74M MTK(M1913 Rail)

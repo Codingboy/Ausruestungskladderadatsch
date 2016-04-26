@@ -3,7 +3,7 @@ class CODI_LO_unarmed_rus_emr : B_Soldier_F
 	side = 1;//0=opfor, 1=blufor, 2=independent, 3=civilian
 	scope = 2;
 	vehicleClass = "CODI_Infantry";
-	author = "Coding";//author
+	author = "SV-97";//author
 	displayName = "unarmed";//anzeigename
 	faction = "CODI_LO_rus_emr";//faction
 	weapons[] = {"Throw","Put"};
