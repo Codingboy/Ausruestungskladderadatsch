@@ -37,7 +37,7 @@ CODI_LO_fnc_unarmed_pmc_dul = {
 };
 CODI_LO_fnc_rflm_pmc_dul = {
    call CODI_LO_fnc_unarmed_pmc_dul;//dadurch sieht der rflm_ch_wood aus wie der unarmed_ch_wood
-   CODI_LO_vest = ["rhs_6b23_digi_rifleman"];
+   CODI_LO_vest = ["V_PlateCarrier1_blk"];
    CODI_LO_helmet = ["rhs_fieldcap_helm_digi","rhs_6b27m_digi","rhs_6b27m_digi_bala","rhs_6b27m_digi_ess","rhs_6b27m_digi_ess_bala"];
    CODI_LO_weaponPacks = [["glock17","acpc2","fnx45"],["grenades_he","grenades_flash","grenades_smoke"],["auga1","akm","bcmjack","m4","f2000","rk62","tar21","fal","hk33"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
 };
