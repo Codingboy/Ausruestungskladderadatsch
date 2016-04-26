@@ -36,7 +36,7 @@ CODI_LO_fnc_unarmed_bw_tropen = {
 };
 CODI_LO_fnc_rflm_bw_tropen = {
 	call CODI_LO_fnc_unarmed_bw_tropen;
-	CODI_LO_weaponPacks = [["fnx45","p99"],["grenades_he","grenades_flash","grenades_smoke"],["g36","g3"],[]];
+	CODI_LO_weaponPacks = [["fnx45","p99"],["grenades_he","grenades_flash","grenades_smoke"],["g36","g3","g36mli"],[]];
 };
 CODI_LO_fnc_cfr_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
@@ -49,7 +49,7 @@ CODI_LO_fnc_medic_bw_tropen = {
 CODI_LO_fnc_ftl_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
 	CODI_LO_backpack = ["BWA3_Carryall_Tropen"];
-	CODI_LO_weaponPacks set [2, ["g36_gl_ftl","g3_gl_ftl"]];
+	CODI_LO_weaponPacks set [2, ["g36_gl_ftl","g3_gl_ftl","g36mli_gl_ftl"]];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_lmg_bw_tropen = {
@@ -69,7 +69,7 @@ CODI_LO_fnc_hmg_bw_tropen = {
 };
 CODI_LO_fnc_grn_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_weaponPacks set [2, ["g36_gl","g3_gl"]];
+	CODI_LO_weaponPacks set [2, ["g36_gl","g3_gl","g36mli_gl"]];
 };
 CODI_LO_fnc_eng_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
@@ -211,7 +211,7 @@ CODI_LO_fnc_ps_bw_tropen = {
 };
 CODI_LO_fnc_fac_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_weaponPacks set [2, ["g36_gl_fac","g3_gl_fac"]];
+	CODI_LO_weaponPacks set [2, ["g36_gl_fac","g3_gl_fac","g36mli_gl_fac"]];
 	CODI_LO_binocular = ["Laserdesignator"];
 	CODI_LO_binocularAmmo = ["Laserbatteries"];
 };
