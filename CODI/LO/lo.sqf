@@ -161,6 +161,10 @@ CODI_LO_fnc_equip = {
 		_unit addItemToBackpack _x;
 	}
 	forEach CODI_LO_backpackMagazines;
+	{
+		_unit addItemToBackpack _x;
+	}
+	forEach CODI_LO_magazines;
 	if (!isNil "CODI_LO_postEquip") then
 	{
 		[player] call CODI_LO_postEquip;
@@ -204,6 +208,7 @@ CODI_LO_fnc_whitelistArsenal = {
 			{
 				[player] call CODI_LO_postWeaponLoadout;
 			};
+			[missionnamespace, CODI_LO_magazines] call BIS_fnc_addVirtualMagazineCargo;
 			[missionnamespace, CODI_LO_primaryWeaponMagazines] call BIS_fnc_addVirtualMagazineCargo;
 			[missionnamespace, CODI_LO_secondaryWeaponMagazines] call BIS_fnc_addVirtualMagazineCargo;
 			[missionnamespace, CODI_LO_launcherMagazines] call BIS_fnc_addVirtualMagazineCargo;
@@ -298,6 +303,7 @@ CODI_LO_fnc_clearWeaponLoadout = {
 	CODI_LO_primaryWeaponMagazines = [];
 	CODI_LO_secondaryWeaponMagazines = [];
 	CODI_LO_launcherMagazines = [];
+	CODI_LO_magazines = [];
 };
 CODI_LO_fnc_addUniformMagazine = {
 	private["_object","_count"];
