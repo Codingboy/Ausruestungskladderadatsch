@@ -197,7 +197,7 @@ CODI_LO_fnc_spotter_bw_tropen = {
 };
 CODI_LO_fnc_sp_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_weaponPacks set [2, ["g36_sp","g3_sp"]];
+	CODI_LO_weaponPacks set [2, ["g36_sp","g3_sp","g36mli_sp"]];
 };
 CODI_LO_fnc_pl_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;

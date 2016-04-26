@@ -376,6 +376,10 @@ CODI_LO_fnc_g36mli = {
 	CODI_LO_primaryWeaponBipod = ["bipod_01_F_blk"];
 	CODI_LO_primaryWeaponOptic = ["optic_MRCO","ACE_optic_MRCO_2D","optic_ACO_grn","optic_Aco","optic_ACO_grn_smg","optic_Aco_smg","RH_compM2l","RH_barska_rds","RH_cmore","optic_Holosight","optic_Holosight_smg"];
 };
+CODI_LO_fnc_g36mli_sp = {
+	call CODI_LO_fnc_g36mli;
+	CODI_LO_primaryWeaponOptic = ["ACE_optic_Hamr_PIP","optic_Hamr","ACE_optic_Hamr_2D"];
+};
 CODI_LO_fnc_g3 = {
 	["hlc_20rnd_762x51_T_G3", 4] call CODI_LO_fnc_addBackpackMagazine;
 	["hlc_20rnd_762x51_Mk316_G3", 6] call CODI_LO_fnc_addVestMagazine;
