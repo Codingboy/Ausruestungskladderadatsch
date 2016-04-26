@@ -127,6 +127,7 @@ class CfgVehicles
 	#include "CODI\LO\bw_fleck.hpp"
 	#include "CODI\LO\bw_tropen.hpp"
 	#include "SV\rus_emr.hpp"
+	#include "SV\pmc_dul.hpp"
 };
 
 class CfgFactionClasses
@@ -162,6 +163,13 @@ class CfgFactionClasses
 	class CODI_LO_rus_emr
 	{
 		displayName = "1st rus_emr";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_pmc_dul
+	{
+		displayName = "1st pmc_dul";
 		priority = 100;
 		icon = "";
 		side = 1;

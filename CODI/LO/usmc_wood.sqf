@@ -91,7 +91,7 @@ CODI_LO_fnc_crew_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
 	CODI_LO_backpack = [];
 	CODI_LO_helmet = ["H_HelmetCrew_B"];
-	CODI_LO_weaponPacks set [2, ["mp5"]];
+	CODI_LO_weaponPacks set [2, ["mp510"]];
 };
 CODI_LO_fnc_com_usmc_wood = {
 	call CODI_LO_fnc_crew_usmc_wood;

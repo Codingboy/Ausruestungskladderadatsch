@@ -91,7 +91,7 @@ CODI_LO_fnc_crew_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
 	CODI_LO_backpack = [];
 	[CODI_LO_helmet, "BWA3_CrewmanKSK_Fleck_Headset"] call BIS_fnc_ArrayUnshift;
-	CODI_LO_weaponPacks set [2, ["mp5"]];
+	CODI_LO_weaponPacks set [2, ["mp510"]];
 };
 CODI_LO_fnc_com_bw_fleck = {
 	call CODI_LO_fnc_crew_bw_fleck;
