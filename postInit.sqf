@@ -70,7 +70,6 @@ if (hasInterface) then
 {
 	waitUntil{!isNull player};
 	[player] call CODI_LO_fnc_initialEquip;
-	call CODI_LO_fnc_whitelistArsenal;
 	player addRating 99999999;
 	[player] spawn CODI_Medical_fnc_medicMonitor;
 	player addAction ["Fastrope", {[player] spawn CODI_LO_fnc_fastrope;}, [], 0, false, true, "", "(vehicle player) isKindOf 'Helicopter' AND (vehicle player) getVariable['CODI_LO_fastropeEnabled', false] AND player != (assignedDriver (vehicle player)) AND (getpos (vehicle player) select 2) > 3 AND (getpos (vehicle player) select 2) < 60 AND (speed (vehicle player)) < 5"];

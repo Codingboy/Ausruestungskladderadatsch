@@ -167,21 +167,33 @@ CODI_LO_fnc_equip = {
 	forEach CODI_LO_magazines;
 	if (!isNil "CODI_LO_postEquip") then
 	{
-		[player] call CODI_LO_postEquip;
+		[_unit] call CODI_LO_postEquip;
 	};
+	[_unit] call CODI_LO_fnc_whitelistArsenal;
 };
 CODI_LO_fnc_whitelistArsenal = {
-	private["_resolved","_fnc"];
-	call CODI_LO_fnc_clearLoadout;
-	_resolved = [player] call CODI_LO_fnc_resolveClass;
-	_fnc = "CODI_LO_fnc_" + (_resolved select 0);
-	call compile format["[player] call %1;", _fnc];
-	_fnc = _fnc + "_" + (_resolved select 1);
-	call compile format["[player] call %1;", _fnc];
-	if (!isNil "CODI_LO_postLoadout") then
-	{
-		[player] call CODI_LO_postLoadout;
-	};
+	private["_unit","_weaponPacks","_objs"];
+	_unit = param[0, player];
+	_objs = [missionnamespace] call BIS_fnc_getVirtualItemCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualItemCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualWeaponCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualMagazineCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualBackpackCargo;
+	_objs = [missionnamespace] call BIS_fnc_getVirtualWeaponCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualItemCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualWeaponCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualMagazineCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualBackpackCargo;
+	_objs = [missionnamespace] call BIS_fnc_getVirtualMagazineCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualItemCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualWeaponCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualMagazineCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualBackpackCargo;
+	_objs = [missionnamespace] call BIS_fnc_getVirtualBackpackCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualItemCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualWeaponCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualMagazineCargo;
+	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualBackpackCargo;
 	[missionnamespace, CODI_LO_uniform] call BIS_fnc_addVirtualItemCargo;
 	[missionnamespace, CODI_LO_vest] call BIS_fnc_addVirtualItemCargo;
 	[missionnamespace, CODI_LO_backpack] call BIS_fnc_addVirtualBackpackCargo;
@@ -203,10 +215,10 @@ CODI_LO_fnc_whitelistArsenal = {
 		{
 			_weaponPack = _x;
 			call CODI_LO_fnc_clearWeaponLoadout;
-			call compile format["[player] call CODI_LO_fnc_%1;", _weaponPack];
+			call compile format["[_unit] call CODI_LO_fnc_%1;", _weaponPack];
 			if (!isNil "CODI_LO_postWeaponLoadout") then
 			{
-				[player] call CODI_LO_postWeaponLoadout;
+				[_unit] call CODI_LO_postWeaponLoadout;
 			};
 			[missionnamespace, CODI_LO_magazines] call BIS_fnc_addVirtualMagazineCargo;
 			[missionnamespace, CODI_LO_primaryWeaponMagazines] call BIS_fnc_addVirtualMagazineCargo;
