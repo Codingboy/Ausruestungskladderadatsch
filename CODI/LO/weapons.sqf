@@ -11,6 +11,18 @@ CODI_LO_fnc_p99 = {
 	CODI_LO_secondaryWeaponSilencer = ["muzzle_snds_L"];
 	CODI_LO_secondaryWeapon = ["hgun_P07_F"];
 };
+CODI_LO_fnc_m9 = {
+	["rhsusf_mag_15Rnd_9x19_FMJ", 2] call CODI_LO_fnc_addVestMagazine;
+	CODI_LO_secondaryWeaponMagazines = ["rhsusf_mag_15Rnd_9x19_FMJ"];
+	CODI_LO_secondaryWeaponSilencer = ["muzzle_snds_L"];//works?
+	CODI_LO_secondaryWeapon = ["rhsusf_weap_m9"];
+};
+CODI_LO_fnc_m9_pilot = {
+	["rhsusf_mag_15Rnd_9x19_FMJ", 2] call CODI_LO_fnc_addUniformMagazine;
+	CODI_LO_secondaryWeaponMagazines = ["rhsusf_mag_15Rnd_9x19_FMJ"];
+	CODI_LO_secondaryWeaponSilencer = ["muzzle_snds_L"];//works?
+	CODI_LO_secondaryWeapon = ["rhsusf_weap_m9"];
+};
 CODI_LO_fnc_fnx45_pilot = {
 	["11Rnd_45ACP_Mag", 2] call CODI_LO_fnc_addUniformMagazine;
 	CODI_LO_secondaryWeaponMagazines = ["11Rnd_45ACP_Mag"];
