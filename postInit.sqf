@@ -130,6 +130,10 @@ if (hasInterface) then
 	};
 	
 	//workaround for fatigue
+	if ((getPlayerUID player) in ["76561198122256926"]) then
+	{
+		CODI_LO_vanillaFatigue = true;
+	};
 	if (!CODI_LO_vanillaFatigue) then
 	{
 		[] spawn

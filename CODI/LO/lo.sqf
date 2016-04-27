@@ -9,7 +9,7 @@ CODI_LO_fnc_equip = {
 	removeBackpack _unit;
 	removeHeadgear _unit;
 	removeGoggles _unit;
-	if ((getPlayerUID _unit) in ["76561197996296785","_SP_PLAYER_"]) then
+	if ((getPlayerUID _unit) in ["76561198042176963","76561197996296785","_SP_PLAYER_"]) then
 	{
 		_unit setVariable ["ACE_hasEarPlugsIn", true, true];
 	};
