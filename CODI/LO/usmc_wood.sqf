@@ -215,3 +215,71 @@ CODI_LO_fnc_fac_usmc_wood = {
 	CODI_LO_binocular = ["Laserdesignator"];
 	CODI_LO_binocularAmmo = ["Laserbatteries"];
 };
+
+
+
+
+CODI_LO_fnc_ammoBox_usmc_wood = {
+	private["_box"];
+	_box = param[0, objNull];
+	[_box, "lar15"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "lar15"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "lar15_sp"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m4"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m4"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m4_gl"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m249"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "sig556"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m14"] call CODI_LO_fnc_addMagazinesToBox;
+};
+CODI_LO_fnc_medicBox_usmc_wood = {
+	private["_box"];
+	_box = param[0, objNull];
+	if (ace_medical_level == 2) then
+	{
+		_box addItemCargoGlobal ["ACE_morphine", 20];
+		_box addItemCargoGlobal ["ACE_epinephrine", 20];
+		_box addItemCargoGlobal ["ACE_packingBandage", 30];
+		_box addItemCargoGlobal ["ACE_elasticBandage", 30];
+		_box addItemCargoGlobal ["ACE_basicBandage", 30];
+		_box addItemCargoGlobal ["ACE_quikclot", 30];
+		_box addItemCargoGlobal ["ACE_salineIV", 15];
+		_box addItemCargoGlobal ["ACE_salineIV_500", 15];
+		_box addItemCargoGlobal ["ACE_salineIV_250", 15];
+	}
+	else
+	{
+		_box addItemCargoGlobal ["ACE_morphine", 20];
+		_box addItemCargoGlobal ["ACE_epinephrine", 20];
+		_box addItemCargoGlobal ["ACE_basicBandage", 80];
+		_box addItemCargoGlobal ["ACE_bloodIV", 15];
+	};
+};
+CODI_LO_fnc_specialAmmoBox_usmc_wood = {
+	private["_box"];
+	_box = param[0, objNull];
+	[_box, "hk121"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "lwmmg"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m60"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "awc"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "awm"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "gm6"] call CODI_LO_fnc_addMagazinesToBox;
+	[_box, "m200"] call CODI_LO_fnc_addMagazinesToBox;
+};
+CODI_LO_fnc_launcherBox_usmc_wood = {
+	private["_box"];
+	_box = param[0, objNull];
+	_box addMagazineCargoGlobal ["Titan_AT", 5];
+	_box addMagazineCargoGlobal ["Titan_AA", 5];
+	_box addMagazineCargoGlobal ["Titan_AP", 10];
+};
+CODI_LO_fnc_grenadeBox_usmc_wood = {
+	private["_box"];
+	_box = param[0, objNull];
+	_box addMagazineCargoGlobal ["HandGrenade", 10];
+	_box addMagazineCargoGlobal ["SmokeShell", 10];
+	_box addMagazineCargoGlobal ["SmokeShellGreen", 10];
+	_box addMagazineCargoGlobal ["Chemlight_green", 10];
+	_box addMagazineCargoGlobal ["ACE_HandFlare_Green", 10];
+	_box addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell", 30];
+};

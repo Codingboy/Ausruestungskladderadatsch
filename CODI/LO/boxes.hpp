@@ -144,27 +144,27 @@
 			};
 		};
 	};
-	class CODI_LO_AmmoResupply : Box_NATO_Ammo_F
+	class CODI_LO_ammoBox_usmc_wood : Box_NATO_Ammo_F
 	{
 		displayName = "1st Munition";
 		author = "Coding";
 	};
-	class CODI_LO_MedicResupply : Box_NATO_Support_F
+	class CODI_LO_medicBox_usmc_wood : Box_NATO_Support_F
 	{
 		displayName = "1st Medizinische Ausrüstung";
 		author = "Coding";
 	};
-	class CODI_LO_GrenadeResupply : Box_NATO_Grenades_F
+	class CODI_LO_grenadeBox_usmc_wood : Box_NATO_Grenades_F
 	{
 		displayName = "1st Granaten";
 		author = "Coding";
 	};
-	class CODI_LO_SpecialAmmoResupply : Box_NATO_WpsSpecial_F
+	class CODI_LO_specialAmmoBox_usmc_wood : Box_NATO_WpsSpecial_F
 	{
 		displayName = "1st SpezialMunition";
 		author = "Coding";
 	};
-	class CODI_LO_LauncherResupply : Box_NATO_WpsLaunch_F
+	class CODI_LO_launcherBox_usmc_wood : Box_NATO_WpsLaunch_F
 	{
 		displayName = "1st WerferMunition";
 		author = "Coding";

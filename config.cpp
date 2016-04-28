@@ -42,25 +42,25 @@ class Extended_Init_Eventhandlers
 	{
 		CODI_LO_AllInOne_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\fnc_initAllInOne.sqf';";
 	};
-	class CODI_LO_AmmoResupply
+	class CODI_LO_ammoBox_usmc_wood
 	{
-		CODI_LO_AmmoResupply_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\Support\fnc_initAmmoResupply.sqf';";
+		CODI_LO_ammoBox_usmc_wood_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\newBox.sqf';";
 	};
-	class CODI_LO_MedicResupply
+	class CODI_LO_medicBox_usmc_wood
 	{
-		CODI_LO_MedicResupply_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\Support\fnc_initMedicalResupply.sqf';";
+		CODI_LO_medicBox_usmc_wood_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\newBox.sqf';";
 	};
-	class CODI_LO_GrenadeResupply
+	class CODI_LO_grenadeBox_usmc_wood
 	{
-		CODI_LO_GrenadeResupply_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\Support\fnc_initGrenadeResupply.sqf';";
+		CODI_LO_grenadeBox_usmc_wood_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\newBox.sqf';";
 	};
-	class CODI_LO_SpecialAmmoResupply
+	class CODI_LO_specialAmmoBox_usmc_wood
 	{
-		CODI_LO_SpecialAmmoResupply_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\Support\fnc_initSpecialAmmoResupply.sqf';";
+		CODI_LO_specialAmmoBox_usmc_wood_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\newBox.sqf';";
 	};
-	class CODI_LO_LauncherResupply
+	class CODI_LO_launcherBox_usmc_wood
 	{
-		CODI_LO_LauncherResupply_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\Support\fnc_initLauncherResupply.sqf';";
+		CODI_LO_launcherBox_usmc_wood_init = "_nul = [_this select 0] execVM '\1st_Core\CODI\LO\newBox.sqf';";
 	};
 	class B_Truck_01_ammo_F
 	{

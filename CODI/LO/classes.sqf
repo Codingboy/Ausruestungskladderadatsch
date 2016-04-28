@@ -212,3 +212,48 @@ CODI_LO_fnc_ps = {
 CODI_LO_fnc_fac = {
 	call CODI_LO_fnc_rflm;
 };
+
+
+
+
+
+CODI_LO_fnc_ammoBox = {
+	private["_box","_colour"];
+	_box = param[0, objNull];
+	_colour = param[1, ""];
+	[_box] call CODI_LO_fnc_clearBox;
+	call compile format["[_box] call CODI_LO_fnc_ammoBox_%1;", _colour];
+	[_box] call CODI_LO_fnc_postInitAmmoResupply;
+};
+CODI_LO_fnc_medicBox = {
+	private["_box","_colour"];
+	_box = param[0, objNull];
+	_colour = param[1, ""];
+	[_box] call CODI_LO_fnc_clearBox;
+	call compile format["[_box] call CODI_LO_fnc_medicBox_%1;", _colour];
+	[_box] call CODI_LO_fnc_postInitMedicalResupply;
+};
+CODI_LO_fnc_specialAmmoBox = {
+	private["_box","_colour"];
+	_box = param[0, objNull];
+	_colour = param[1, ""];
+	[_box] call CODI_LO_fnc_clearBox;
+	call compile format["[_box] call CODI_LO_fnc_specialAmmoBox_%1;", _colour];
+	[_box] call CODI_LO_fnc_postInitSpecialAmmoResupply;
+};
+CODI_LO_fnc_launcherBox = {
+	private["_box","_colour"];
+	_box = param[0, objNull];
+	_colour = param[1, ""];
+	[_box] call CODI_LO_fnc_clearBox;
+	call compile format["[_box] call CODI_LO_fnc_launcherBox_%1;", _colour];
+	[_box] call CODI_LO_fnc_postInitLauncherResupply;
+};
+CODI_LO_fnc_grenadeBox = {
+	private["_box","_colour"];
+	_box = param[0, objNull];
+	_colour = param[1, ""];
+	[_box] call CODI_LO_fnc_clearBox;
+	call compile format["[_box] call CODI_LO_fnc_grenadeBox_%1;", _colour];
+	[_box] call CODI_LO_fnc_postInitGrenadeResupply;
+};

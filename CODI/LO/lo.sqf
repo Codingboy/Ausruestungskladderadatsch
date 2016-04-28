@@ -491,6 +491,19 @@ CODI_LO_fnc_clearBox = {
 	clearMagazineCargoGlobal _box;
 	clearBackpackCargoGlobal _box;
 };
+CODI_LO_fnc_fillBoxes = {
+	private["_box","_resolved","_class","_colour","_tmp"];
+	_tmp = CODI_LO_boxes;
+	{
+		_box = _x;
+		_resolved = [_box] call CODI_LO_fnc_resolveClass;
+		_class = _resolved select 0;
+		_colour = _resolved select 1;
+		call compile format["[_box, %2] call CODI_LO_fnc_%1;", _class, _colour];
+		CODI_LO_boxes deleteAt 0;
+	}
+	forEach _tmp;
+};
 
 
 

@@ -65,6 +65,10 @@ if (isNil "CODI_LO_vanillaFatigue") then
 {
 	CODI_LO_vanillaFatigue = false;
 };
+if (isNil "CODI_LO_boxes") then
+{
+	CODI_LO_boxes = [];
+};
 CODI_LO_ServerInitialised = true;
 if (hasInterface) then
 {
@@ -170,3 +174,13 @@ if (hasInterface) then
 	};
 };
 //[] execVM "\1st_Core\CSSA3\CSSA3_init.sqf";
+if (isServer) then
+{
+	[] spawn {
+		while {true} do
+		{
+			call CODI_LO_fnc_fillBoxes;
+			sleep 60;
+		};
+	};
+};
