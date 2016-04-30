@@ -42,7 +42,7 @@ CODI_LO_fnc_cfr = {
 		["ACE_personalAidKit", 1] call CODI_LO_fnc_addBackpackItem;
 		["ACE_tourniquet", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_packingBandage", 15] call CODI_LO_fnc_addBackpackItem;
-		["ACE_basicBandage", 5] call CODI_LO_fnc_addBackpackItem;
+		["ACE_fieldDressing", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_elasticBandage", 15] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 5] call CODI_LO_fnc_addBackpackItem;
 	}
@@ -52,7 +52,7 @@ CODI_LO_fnc_cfr = {
 		["ACE_morphine", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_packingBandage", 15] call CODI_LO_fnc_addBackpackItem;
 		["ACE_elasticBandage", 15] call CODI_LO_fnc_addBackpackItem;
-		["ACE_basicBandage", 5] call CODI_LO_fnc_addBackpackItem;
+		["ACE_fieldDressing", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_bloodIV", 6] call CODI_LO_fnc_addBackpackItem;
 	};
@@ -69,7 +69,7 @@ CODI_LO_fnc_medic = {
 		["ACE_personalAidKit", 1] call CODI_LO_fnc_addBackpackItem;
 		["ACE_tourniquet", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_packingBandage", 18] call CODI_LO_fnc_addBackpackItem;
-		["ACE_basicBandage", 10] call CODI_LO_fnc_addBackpackItem;
+		["ACE_fieldDressing", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_elasticBandage", 18] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_surgicalKit", 1] call CODI_LO_fnc_addBackpackItem;
@@ -80,7 +80,7 @@ CODI_LO_fnc_medic = {
 		["ACE_morphine", 15] call CODI_LO_fnc_addBackpackItem;
 		["ACE_packingBandage", 18] call CODI_LO_fnc_addBackpackItem;
 		["ACE_elasticBandage", 18] call CODI_LO_fnc_addBackpackItem;
-		["ACE_basicBandage", 10] call CODI_LO_fnc_addBackpackItem;
+		["ACE_fieldDressing", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_bloodIV", 10] call CODI_LO_fnc_addBackpackItem;
 	};

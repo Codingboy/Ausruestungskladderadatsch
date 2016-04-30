@@ -241,7 +241,7 @@ CODI_LO_fnc_medicBox_usmc_wood = {
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
 		_box addItemCargoGlobal ["ACE_packingBandage", 30];
 		_box addItemCargoGlobal ["ACE_elasticBandage", 30];
-		_box addItemCargoGlobal ["ACE_basicBandage", 30];
+		_box addItemCargoGlobal ["ACE_fieldDressing", 30];
 		_box addItemCargoGlobal ["ACE_quikclot", 30];
 		_box addItemCargoGlobal ["ACE_salineIV", 15];
 		_box addItemCargoGlobal ["ACE_salineIV_500", 15];
@@ -251,7 +251,7 @@ CODI_LO_fnc_medicBox_usmc_wood = {
 	{
 		_box addItemCargoGlobal ["ACE_morphine", 20];
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
-		_box addItemCargoGlobal ["ACE_basicBandage", 80];
+		_box addItemCargoGlobal ["ACE_fieldDressing", 80];
 		_box addItemCargoGlobal ["ACE_bloodIV", 15];
 	};
 };
