@@ -499,7 +499,7 @@ CODI_LO_fnc_fillBoxes = {
 		_resolved = [_box] call CODI_LO_fnc_resolveClass;
 		_class = _resolved select 0;
 		_colour = _resolved select 1;
-		call compile format["[_box, %2] call CODI_LO_fnc_%1;", _class, _colour];
+		call compile format["[_box, ""%2""] call CODI_LO_fnc_%1;", _class, _colour];
 		CODI_LO_boxes deleteAt 0;
 	}
 	forEach _tmp;
