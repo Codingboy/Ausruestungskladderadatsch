@@ -220,6 +220,35 @@ CODI_LO_fnc_ak12 = {
 	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
 	CODI_LO_primaryWeaponOptic = ["RH_compM2","optic_MRCO","ACE_optic_MRCO_2D","optic_ACO_grn","optic_Aco","optic_ACO_grn_smg","optic_Aco_smg","RH_barska_rds","RH_cmore","optic_Holosight","optic_Holosight_smg"];
 };
+CODI_LO_fnc_ak74mmtk = {
+	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
+	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_primaryWeapon = ["hlc_rifle_ak74m_MTK"];
+	CODI_LO_primaryWeaponLaser = [];
+	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
+	CODI_LO_primaryWeaponOptic = ["RH_compM2","optic_MRCO","ACE_optic_MRCO_2D","optic_ACO_grn","optic_Aco","optic_ACO_grn_smg","optic_Aco_smg","RH_barska_rds","RH_cmore","optic_Holosight","optic_Holosight_smg"];
+};
+CODI_LO_fnc_ak74m = {
+	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
+	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_primaryWeapon = ["hlc_rifle_ak74m"];
+	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
+	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
+};
+CODI_LO_fnc_akm = {
+	["hlc_30Rnd_762x39_b_ak", 5] call CODI_LO_fnc_addVestMagazine;
+	["hlc_30Rnd_762x39_t_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_primaryWeapon = ["hlc_rifle_akm"];
+	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_762SUP_AK"];
+	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
+};
+CODI_LO_fnc_rk62 = {
+	["hlc_30Rnd_762x39_b_ak", 5] call CODI_LO_fnc_addVestMagazine;
+	["hlc_30Rnd_762x39_t_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_primaryWeapon = ["hlc_rifle_RK62"];
+	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_762SUP_AK"];
+	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
+};
 CODI_LO_fnc_auga3 = {
 	["hlc_30Rnd_556x45_T_AUG", 5] call CODI_LO_fnc_addVestMagazine;
 	["hlc_30Rnd_556x45_SOST_AUG", 5] call CODI_LO_fnc_addVestMagazine;
@@ -649,28 +678,6 @@ CODI_LO_fnc_SVDS = {
 	CODI_LO_primaryWeaponSilencer = ["rhs_acc_tgpv"];
 	CODI_LO_primaryWeaponOptic = ["rhs_acc_pso1m21","rhs_acc_1p29","rhs_acc_1pn93_1"];
 };
-CODI_LO_fnc_ak74mmtk = {
-	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
-	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
-	CODI_LO_primaryWeapon = ["hlc_rifle_ak74m_MTK"];
-	CODI_LO_primaryWeaponLaser = [];
-	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
-	CODI_LO_primaryWeaponOptic = ["RH_compM2","optic_MRCO","ACE_optic_MRCO_2D","optic_ACO_grn","optic_Aco","optic_ACO_grn_smg","optic_Aco_smg","RH_barska_rds","RH_cmore","optic_Holosight","optic_Holosight_smg"];
-};
-CODI_LO_fnc_ak74m = {
-	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
-	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
-	CODI_LO_primaryWeapon = ["hlc_rifle_ak74m"];
-	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
-	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
-};
-CODI_LO_fnc_aks74u = {
-	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
-	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
-	CODI_LO_primaryWeapon = ["hlc_rifle_aks74u"];
-	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
-	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1","rhs_acc_ekp1"];
-};
 CODI_LO_fnc_aks74u = {
 	["hlc_30Rnd_545x39_t_ak", 5] call CODI_LO_fnc_addVestMagazine;
 	["hlc_30Rnd_545x39_EP_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
@@ -692,20 +699,6 @@ CODI_LO_fnc_ak12u = {
 	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_545SUP_AK"];
 	CODI_LO_primaryWeaponLaser = ["acc_pointer_IR"];
 	CODI_LO_primaryWeaponOptic = ["RH_compM2","optic_MRCO","ACE_optic_MRCO_2D","optic_ACO_grn","optic_Aco","optic_ACO_grn_smg","optic_Aco_smg","RH_barska_rds","RH_cmore","optic_Holosight","optic_Holosight_smg"];
-};
-CODI_LO_fnc_akm = {
-	["hlc_30Rnd_762x39_b_ak", 5] call CODI_LO_fnc_addVestMagazine;
-	["hlc_30Rnd_762x39_t_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
-	CODI_LO_primaryWeapon = ["hlc_rifle_akm"];
-	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_762SUP_AK"];
-	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
-};
-CODI_LO_fnc_rk62 = {
-	["hlc_30Rnd_762x39_b_ak", 5] call CODI_LO_fnc_addVestMagazine;
-	["hlc_30Rnd_762x39_t_ak", 5] call CODI_LO_fnc_addBackpackMagazine;
-	CODI_LO_primaryWeapon = ["hlc_rifle_RK62"];
-	CODI_LO_primaryWeaponSilencer = ["hlc_muzzle_762SUP_AK"];
-	CODI_LO_primaryWeaponOptic = ["rhs_acc_1p29","rhs_acc_1pn93_1"];
 };
 CODI_LO_fnc_akm_gl = {
 	call CODI_LO_fnc_akm;
