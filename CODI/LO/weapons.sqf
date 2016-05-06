@@ -731,7 +731,7 @@ CODI_LO_fnc_ak74m_gl_ftl = {
 	CODI_LO_primaryWeapon = ["hlc_rifle_ak74m_gl"];
 };
 CODI_LO_fnc_auga3_gl = {
-	call CODI_LO_fnc_aug;
+	call CODI_LO_fnc_auga3;
 	["1Rnd_HE_Grenade_shell", 20] call CODI_LO_fnc_addBackpackMagazine;
 	CODI_LO_primaryWeapon = ["hlc_rifle_auga3_GL_B"];
 };
