@@ -214,4 +214,5 @@ CODI_LO_fnc_fac_bw_fleck = {
 	CODI_LO_weaponPacks set [2, ["g36_gl_fac","g3_gl_fac","g36mli_gl_fac"]];
 	CODI_LO_binocular = ["Laserdesignator"];
 	CODI_LO_binocularAmmo = ["Laserbatteries"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 };

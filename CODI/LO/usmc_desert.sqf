@@ -213,4 +213,5 @@ CODI_LO_fnc_fac_usmc_desert = {
 	CODI_LO_weaponPacks set [2, ["m4_gl_fac"]];
 	CODI_LO_binocular = ["Laserdesignator"];
 	CODI_LO_binocularAmmo = ["Laserbatteries"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 };
