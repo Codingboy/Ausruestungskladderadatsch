@@ -73,8 +73,8 @@ CODI_LO_fnc_eng_pmc_dul = {
 };
 CODI_LO_fnc_uav_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
-	CODI_LO_backpack = ["O_UAV_01_backpack_F"];
-	CODI_LO_gps = ["O_UavTerminal"];
+	CODI_LO_backpack = ["B_UAV_01_backpack_F"];
+	CODI_LO_gps = ["B_UavTerminal"];
 };
 CODI_LO_fnc_es_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
