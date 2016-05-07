@@ -547,6 +547,7 @@ CODI_LO_fnc_nlaw = {
 	CODI_LO_launcher = ["launch_NLAW_F"];
 };
 CODI_LO_fnc_pzf3 = {
+	CODI_LO_launcherMagazines = ["BWA3_Pzf3_IT"];
 	CODI_LO_launcher = ["BWA3_Pzf3"];
 	CODI_LO_launcherOptic = ["BWA3_optic_NSA80"];
 };
