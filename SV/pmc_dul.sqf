@@ -82,7 +82,7 @@ CODI_LO_fnc_es_pmc_dul = {
 };
 CODI_LO_fnc_dm_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
-	CODI_LO_weaponPacks set [2, ["m14","sig556"]];
+	CODI_LO_weaponPacks set [2, ["stgw57ris","m14","sig556"]];
 };
 CODI_LO_fnc_crew_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;

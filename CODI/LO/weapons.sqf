@@ -408,6 +408,15 @@ CODI_LO_fnc_vs121 = {
 	CODI_LO_primaryWeaponBipod = ["bipod_01_F_blk"];
 	CODI_LO_primaryWeaponOptic = ["optic_SOS","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_DMS","optic_KHS_blk","optic_KHS_hex","optic_KHS_tan","optic_LRPS","optic_NVS","RH_anpvs4","RH_anpvs10"];
 };
+CODI_LO_fnc_stgw57ris = {
+	["hlc_24Rnd_75x55_B_stgw", 5] call CODI_LO_fnc_addVestMagazine;
+	["hlc_24Rnd_75x55_ap_stgw", 5] call CODI_LO_fnc_addVestMagazine;
+	CODI_LO_primaryWeapon = ["hlc_rifle_stgw57_RIS"];
+	CODI_LO_primaryWeaponSilencer = ["RH_fa762"];
+	CODI_LO_primaryWeaponOptic = ["optic_SOS","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_DMS","optic_KHS_blk","optic_KHS_hex","optic_KHS_tan","optic_LRPS","optic_NVS","RH_anpvs4","RH_anpvs10"];
+};
+
+
 
 
 
