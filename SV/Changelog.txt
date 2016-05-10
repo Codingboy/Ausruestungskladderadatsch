@@ -1,3 +1,25 @@
+10.0.2016
+#weapon.sqf (
++QBZ-95-1
++QBZ-95-1 GL
++QBZ-95-1 GL FTL
++QBZ-95B-1
++QSZ-92
++QCW-05
++QSW-06
++QBZ-03
++QJB-95-1
++CS/LR-4
++QBU-88
++QJY-88
++PF98 (+_ammo)
++FN6 (+ _ammo)
++PF89B AT
+)
++ pla_07d.sqf
++ pla_07d.hpp
+# config.cpp included pla_07d
+
 26.04.2016
 #rus_emr.sqf switched vestItems to backpack
 #weapon.sqf (

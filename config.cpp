@@ -174,6 +174,13 @@ class CfgFactionClasses
 		icon = "";
 		side = 1;
 	};
+	class CODI_LO_pla_07d
+	{
+		displayName = "1st pla_07d";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
 };
 
 class CfgVehicleClasses
