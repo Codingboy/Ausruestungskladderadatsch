@@ -128,6 +128,7 @@ class CfgVehicles
 	#include "CODI\LO\bw_tropen.hpp"
 	#include "SV\rus_emr.hpp"
 	#include "SV\pmc_dul.hpp"
+	#include "SV\pla_07d.hpp"
 };
 
 class CfgFactionClasses
