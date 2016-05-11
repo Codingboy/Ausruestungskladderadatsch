@@ -65,6 +65,11 @@ if (isNil "CODI_LO_vanillaFatigue") then
 {
 	CODI_LO_vanillaFatigue = false;
 };
+if (isNil "CODI_LO_cleanup") then
+{
+	CODI_LO_cleanup = true;
+};
+
 if (isNil "CODI_LO_boxes") then
 {
 	CODI_LO_boxes = [];
@@ -176,6 +181,10 @@ if (hasInterface) then
 //[] execVM "\1st_Core\CSSA3\CSSA3_init.sqf";
 if (isServer) then
 {
+	if (CODI_LO_cleanup) then
+	{
+		[] execVM "1st_Core\CLEANUP\repetitive_cleanup.sqf";
+	};
 	[] spawn {
 		while {true} do
 		{
