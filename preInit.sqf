@@ -90,6 +90,7 @@ call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\bw_tropen.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\usa_ocp.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\SV\rus_emr.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\SV\pmc_dul.sqf";
+call compile preprocessFileLineNumbers "\1st_Core\SV\pla_07d.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\LO\weapons.sqf";
 call compile preprocessFileLineNumbers "\1st_Core\CODI\Medical\init.sqf";
 CODI_LO_preInited = true;

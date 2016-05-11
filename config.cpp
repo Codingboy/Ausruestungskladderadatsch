@@ -129,6 +129,7 @@ class CfgVehicles
 	#include "CODI\LO\usa_ocp.hpp"
 	#include "SV\rus_emr.hpp"
 	#include "SV\pmc_dul.hpp"
+	#include "SV\pla_07d.hpp"
 };
 
 class CfgFactionClasses
@@ -178,6 +179,13 @@ class CfgFactionClasses
 	class CODI_LO_usa_ocp
 	{
 		displayName = "1st usa_ocp";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_pla_07d
+	{
+		displayName = "1st pla_07d";
 		priority = 100;
 		icon = "";
 		side = 1;
