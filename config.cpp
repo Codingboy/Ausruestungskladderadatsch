@@ -126,6 +126,7 @@ class CfgVehicles
 	#include "CODI\LO\usmc_desert.hpp"
 	#include "CODI\LO\bw_fleck.hpp"
 	#include "CODI\LO\bw_tropen.hpp"
+	#include "CODI\LO\usa_ocp.hpp"
 	#include "SV\rus_emr.hpp"
 	#include "SV\pmc_dul.hpp"
 };
@@ -170,6 +171,13 @@ class CfgFactionClasses
 	class CODI_LO_pmc_dul
 	{
 		displayName = "1st pmc_dul";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_usa_ocp
+	{
+		displayName = "1st usa_ocp";
 		priority = 100;
 		icon = "";
 		side = 1;
