@@ -194,22 +194,22 @@ CODI_LO_fnc_whitelistArsenal = {
 	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualWeaponCargo;
 	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualMagazineCargo;
 	[missionnamespace, _objs select 0] call BIS_fnc_removeVirtualBackpackCargo;
-	[missionnamespace, CODI_LO_uniform] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_vest] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_backpack] call BIS_fnc_addVirtualBackpackCargo;
-	[missionnamespace, CODI_LO_helmet] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_goggles] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_nv] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_binocular] call BIS_fnc_addVirtualWeaponCargo;
-	[missionnamespace, CODI_LO_radio] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_gps] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_watch] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_compass] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_map] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_uniformItems] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_vestItems] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_backpackItems] call BIS_fnc_addVirtualItemCargo;
-	[missionnamespace, CODI_LO_binocularAmmo] call BIS_fnc_addVirtualMagazineCargo;
+	[missionnamespace, CODI_LO_uniform, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_vest, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_backpack, false] call BIS_fnc_addVirtualBackpackCargo;
+	[missionnamespace, CODI_LO_helmet, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_goggles, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_nv, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_binocular, false] call BIS_fnc_addVirtualWeaponCargo;
+	[missionnamespace, CODI_LO_radio, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_gps, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_watch, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_compass, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_map, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_uniformItems, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_vestItems, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_backpackItems, false] call BIS_fnc_addVirtualItemCargo;
+	[missionnamespace, CODI_LO_binocularAmmo, false] call BIS_fnc_addVirtualMagazineCargo;
 	{
 		_weaponPacks = _x;
 		{
