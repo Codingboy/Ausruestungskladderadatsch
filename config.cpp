@@ -130,6 +130,36 @@ class CfgVehicles
 	#include "SV\rus_emr.hpp"
 	#include "SV\pmc_dul.hpp"
 	#include "SV\pla_07d.hpp"
+	class Man;
+	class CAManBase: Man
+	{
+		class ACE_SelfActions
+		{
+			class ACE_Equipment
+			{
+				class CODI_LO_lowerHeadset
+				{
+					displayName = "Headset absetzen";
+					condition = "CODI_LO_headsetOn";
+					statement = "call CODI_LO_fnc_lowerHeadSet";
+					showDisabled = 0;
+					priority = 0.1;
+					icon = "\z\ace\addons\interaction\UI\dot_ca.paa";
+					exceptions[] = {"isNotInside","isNotSitting"};
+				};
+				class CODI_LO_raiseHeadset
+				{
+					displayName = "Headset aufsetzen";
+					condition = "!CODI_LO_headsetOn";
+					statement = "call CODI_LO_fnc_raiseHeadSet";
+					showDisabled = 0;
+					priority = 0.1;
+					icon = "\z\ace\addons\interaction\UI\dot_ca.paa";
+					exceptions[] = {"isNotInside","isNotSitting"};
+				};
+			};
+		};
+	};
 };
 
 class CfgFactionClasses

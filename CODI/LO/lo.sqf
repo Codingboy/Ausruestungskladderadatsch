@@ -504,8 +504,45 @@ CODI_LO_fnc_fillBoxes = {
 	}
 	forEach _tmp;
 };
-
-
+CODI_LO_headsetOn = true;
+CODI_LO_fnc_lowerHeadSet = {
+	private["_volume"];
+	_volume = 0;
+	if (call TFAR_fnc_haveSWRadio) then
+	{
+		CODI_LO_swVolume = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwVolume;
+		[(call TFAR_fnc_ActiveSWRadio), _volume] call TFAR_fnc_setSwVolume;
+	};
+	if (call TFAR_fnc_haveLRRadio) then
+	{
+		CODI_LO_lrVolume = [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1] call TFAR_fnc_getLrVolume;
+		[(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _volume] call TFAR_fnc_setLrVolume;
+		if (count(player call TFAR_fnc_VehicleLR) > 0 ) then
+		{
+			[(player call TFAR_fnc_VehicleLR) select 0, (player call TFAR_fnc_VehicleLR) select 1, _volume] call TFAR_fnc_setLrVolume;
+		};
+	};
+	if (_volume == 0) then
+	{
+		player setVariable ["tf_unable_to_use_radio", true, true];
+	};
+	CODI_LO_headsetOn = false;
+};
+CODI_LO_fnc_raiseHeadSet = {
+	if (call TFAR_fnc_haveSWRadio) then
+	{
+		[(call TFAR_fnc_ActiveSWRadio), CODI_LO_swVolume] call TFAR_fnc_setSwVolume;
+	};
+	if (call TFAR_fnc_haveLRRadio) then {
+		[(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, CODI_LO_lrVolume] call TFAR_fnc_setLrVolume;
+		if ( count (player call TFAR_fnc_VehicleLR) > 0 ) then
+		{
+			[(player call TFAR_fnc_VehicleLR) select 0, (player call TFAR_fnc_VehicleLR) select 1, CODI_LO_lrVolume] call TFAR_fnc_setLrVolume;
+		};
+	};
+	player setVariable ["tf_unable_to_use_radio", false, true];
+	CODI_LO_headsetOn = true;
+};
 
 
 
