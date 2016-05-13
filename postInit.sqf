@@ -193,3 +193,4 @@ if (isServer) then
 		};
 	};
 };
+execVM "1st_Core\TOW\fn_advancedTowing.sqf";
