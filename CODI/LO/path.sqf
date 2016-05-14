@@ -75,7 +75,7 @@ CODI_Path_fnc_h = {
 	private["_src","_dst","_dist"];
 	_src = param[0, objNull];
 	_dst = param[1, objNull];
-	_dist = ((getPos _src) distance (getPos _dst))*1.25;
+	_dist = ((getPos _src) distance (getPos _dst))*1.33;
 	_dist
 };
 CODI_Path_fnc_cost = {
@@ -117,7 +117,7 @@ CODI_Path_fnc_calcRoute = {
 	_dst = param[1, [0,0,0]];
 	_srcRoad = [_src] call CODI_Path_fnc_getNearestRoad;
 	_dstRoad = [_dst] call CODI_Path_fnc_getNearestRoad;
-	if (isNull _srcRoad || isNull _dstRoad) exitWith {};
+	if (isNull _srcRoad || isNull _dstRoad) exitWith {hint "src or dst not close to a road"};
 	[_srcRoad, _dstRoad] call CODI_Path_fnc_aStar;
 };
 CODI_Path_fnc_removeMarkers = {
