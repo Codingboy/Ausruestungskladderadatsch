@@ -2,6 +2,8 @@ private["_unit","_desc","_callsignArray","_isCallsign","_callsign","_separator"]
 
 _unit = _this select 0;
 _separator = param[1, "-"];
+if ((group _unit) getVariable ["CODI_LO_callsignSet", false]) exitWith {};
+(group _unit) setVariable ["CODI_LO_callsignSet", true, true];
 
 _desc = toArray(roleDescription _unit);
 _callsignArray = [];
