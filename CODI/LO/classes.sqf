@@ -90,7 +90,7 @@ CODI_LO_fnc_ftl = {
 	call CODI_LO_fnc_rflm;
 	["SmokeShellGreen", 5] call CODI_LO_fnc_addBackpackItem;
 	["ACE_HandFlare_Green", 5] call CODI_LO_fnc_addBackpackItem;
-	["CODI_VArty_Tablet"] call CODI_LO_fnc_addBackpackItem;
+	["CODI_Arty_Tablet"] call CODI_LO_fnc_addBackpackItem;
 	[CODI_LO_binocular, "ACE_MX2A"] call BIS_fnc_ArrayUnshift;
 	[CODI_LO_binocular, "ACE_Yardage450"] call BIS_fnc_ArrayUnshift;
 	["ACE_EntrenchingTool"] call CODI_LO_fnc_addBackpackItem;
@@ -144,7 +144,7 @@ CODI_LO_fnc_com = {
 };
 CODI_LO_fnc_sl = {
 	call CODI_LO_fnc_rflm;
-	["CODI_VArty_Tablet"] call CODI_LO_fnc_addBackpackItem;
+	["CODI_Arty_Tablet"] call CODI_LO_fnc_addBackpackItem;
 	[CODI_LO_binocular, "ACE_Yardage450"] call BIS_fnc_ArrayUnshift;
 	["ACE_EntrenchingTool"] call CODI_LO_fnc_addBackpackItem;
 	["ACE_DAGR"] call CODI_LO_fnc_addBackpackItem;
@@ -205,6 +205,7 @@ CODI_LO_fnc_sp = {
 };
 CODI_LO_fnc_pl = {
 	call CODI_LO_fnc_rflm;
+	["CODI_Arty_Tablet"] call CODI_LO_fnc_addBackpackItem;
 };
 CODI_LO_fnc_ps = {
 	call CODI_LO_fnc_rflm;
