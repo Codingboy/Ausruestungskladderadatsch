@@ -78,6 +78,12 @@ CODI_LO_ServerInitialised = true;
 if (hasInterface) then
 {
 	waitUntil{!isNull player};
+	_resolved = [player] call CODI_LO_fnc_resolveClass;
+	_class = _resolved select 0;
+	if (_class == "ftl" || _class == "sl" || _class == "pl") then
+	{
+		execVM "1st_Core\CODI\LO\path.sqf";
+	};
 	[player] call CODI_LO_fnc_initialEquip;
 	player addRating 99999999;
 	[player] spawn CODI_Medical_fnc_medicMonitor;
