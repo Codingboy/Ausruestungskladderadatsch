@@ -1,7 +1,8 @@
 CODI_Path_markers = [];
+CODI_Path_markersLocal = [];
 CODI_Path_variables = [];
 CODI_Path_fnc_aStar = {
-	private["_continue","_tentativeG","_roads","_current","_open","_closed","_dst","_src"];
+	private["_continue","_tentativeG","_roads","_current","_open","_closed","_dst","_src","_marker"];
 	_src = param[0, objNull];
 	_dst = param[1, objNull];
 	_closed = [];
@@ -28,9 +29,12 @@ CODI_Path_fnc_aStar = {
 		_closed pushBack _current;
 		_roads = roadsConnectedTo _current;
 		{
-			_roads pushBackUnique _x;
+			if (_x != _current) then
+			{
+				_roads pushBackUnique _x;
+			};
 		}
-		forEach ((getPos _current) nearRoads 15);
+		forEach ((getPos _current) nearRoads 20);
 		{
 			if (!(_x in _closed)) then
 			{
@@ -49,6 +53,12 @@ CODI_Path_fnc_aStar = {
 				};
 				if (!_continue) then
 				{
+					_marker = createMarkerLocal [str _x, getPos _x];
+					_marker setMarkerShapeLocal "ICON";
+					_marker setMarkerColorLocal "ColorWEST";
+					_marker setMarkerTypeLocal "MIL_DOT";
+					_marker setMarkerAlphaLocal 0.25;
+					CODI_Path_markersLocal pushBack _marker;
 					missionNamespace setVariable ["CODI_Path_parent_" + str _x, _current];
 					CODI_Path_variables pushBack ("CODI_Path_parent_" + str _x);
 					missionNamespace setVariable ["CODI_Path_g_" + str _x, _tentativeG];
@@ -65,7 +75,7 @@ CODI_Path_fnc_h = {
 	private["_src","_dst","_dist"];
 	_src = param[0, objNull];
 	_dst = param[1, objNull];
-	_dist = ((getPos _src) distance (getPos _dst))*1.5;
+	_dist = ((getPos _src) distance (getPos _dst))*1.25;
 	_dist
 };
 CODI_Path_fnc_cost = {
@@ -77,13 +87,26 @@ CODI_Path_fnc_cost = {
 };
 CODI_Path_fnc_mark = {
 	private["_marker","_dst"];
+	{
+		deleteMarkerLocal _x;
+	}
+	forEach CODI_Path_markersLocal;
+	CODI_Path_markersLocal = [];
 	_dst = param[0, objNull];
+	_marker = createMarker [str _dst, getPos _dst];
+	_marker setMarkerShape "ICON";
+	_marker setMarkerColor "ColorWEST";
+	_marker setMarkerType "MIL_DOT";
+	CODI_Path_markers pushBack _marker;
 	while {!isNull _dst} do
 	{
-		_marker = createMarker [str _dst, getPos _dst];
-		_marker setMarkerShape "ICON";
-		_marker setMarkerColor "ColorWEST";
-		_marker setMarkerType "MIL_DOT";
+		if ((getMarkerPos _marker) distance2d (getPos _dst) > 75) then
+		{		
+			_marker = createMarker [str _dst, getPos _dst];
+			_marker setMarkerShape "ICON";
+			_marker setMarkerColor "ColorWEST";
+			_marker setMarkerType "MIL_DOT";
+		};
 		CODI_Path_markers pushBack _marker;
 		_dst = missionNamespace getVariable ["CODI_Path_parent_" + str _dst, objNull];
 	};
