@@ -1,2 +1,28 @@
 ausrüstungskisten munition und spezialmunitionen funktionieren nur mit zeus garantiert
 helicrew usmc, bw überarbeiten
+
+weapons.sqf
+	rhs_weap_hk416d145_grip2
+		hlc_30rnd_556x45_SOST
+		RH_fa556
+		BWA3_acc_VarioRay_irlaser
+		rhsusf_acc_SpecterDR_A_3d
+		rhsusf_acc_grip2
+	rhs_weap_hk416d145_m320
+		rhs_mag_M441_HE
+		kein unterlauf!
+	
+	rhs_weap_pp2000
+	rhs_weap_pp2000_folded
+		rhs_mag_9x19mm_7n31_20
+		rhs_mag_9x19mm_7n31_44
+		rhs_acc_rakursPM
+		
+	rhs_weap_asval_grip_npz
+		rhs_20rnd_9x39mm_SP6
+		rhs_acc_2dpZenit_ris
+		rhs_acc_rakursPM
+	rhs_weap_vss
+		rhs_acc_pso1m21	
+	
+	
