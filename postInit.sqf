@@ -107,10 +107,7 @@ if (hasInterface) then
 	{
 		//["Preload"] call BIS_fnc_arsenal;
 	};
-	TF_speak_volume_level = "whispering";
-	TF_speak_volume_meters = 5;
-	[parseText (format[localize "STR_voice_volume", localize "STR_voice_whispering"]), 5] call TFAR_fnc_showHint;
-	["OnSpeakVolume", player, [player, TF_speak_volume_meters]] call TFAR_fnc_fireEventHandlers;
+	[5] call TFAR_fnc_setVoiceVolume;
 
 	//workaround for ace featurebug "vanilla damage/no running"
 	/*[] spawn {
@@ -144,27 +141,6 @@ if (hasInterface) then
 		};
 	};
 	
-	//workaround for fatigue
-	if (isClass (configFile >> "CfgPatches" >> "CODI_Stam")) then
-	{
-		CODI_LO_vanillaFatigue = true;
-	};
-	if (!CODI_LO_vanillaFatigue) then
-	{
-		[] spawn
-		{
-			while {true} do
-			{
-				player enableFatigue false;
-				player enableStamina false;
-				player allowSprint true;
-				player setFatigue 0;
-				player setStamina 60;
-				sleep 1;
-			};
-		};
-	};
-	
 	if (CODI_LO_noShotsAtMissionEnd) then
 	{
 		//addMissionEventHandler ["Ended", {removeAllWeapons player; removeAllItems player;}];
@@ -178,6 +154,10 @@ if (hasInterface) then
 	if (CODI_LO_setCallsigns) then
 	{
 		[player, "-"] execVM "1st_Core\CODI\setCallsigns.sqf";
+	};
+	if ((getPlayerUID player) in ["76561197996296785"]) then
+	{
+		player addAction ["Debug Console", {(finddisplay 46) createdisplay "RscDisplayDebugPublic";}];
 	};
 	if (player getVariable["CODI_LO_Admin", false] || (getPlayerUID player) in ["_SP_PLAYER_","76561197996296785"] || serverCommandAvailable "#kick") then
 	{

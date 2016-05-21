@@ -21,7 +21,6 @@ CODI_LO_restrictedClass = true;//false=keine einschränkung der Klassen, true=ei
 CODI_LO_equipOnRespawn = true;//einheit wird bei respawn neu ausgerüstet   default: true
 CODI_LO_noShotsAtMissionEnd = true;//einheit bekommt bei missionsende alle waffen und items abgenommen   default: true
 CODI_LO_setCallsigns = true;//Callsigns werden automatisch benannt falls die einheiten nach dem Schame "Alpha - FTL" benannt wurden   default: false
-CODI_LO_vanillaFatigue = false;//true um vanilla fatigue wieder einzuschalten
 CODI_LO_cleanup = true;//true um veraltete leichen/wracks/... zu löschen
 if (isNil "CODI_LO_option_va") then
 {
@@ -29,7 +28,7 @@ if (isNil "CODI_LO_option_va") then
 };
 if (isNil "CODI_LO_option_lva") then
 {
-   CODI_LO_option_lva = true;//freischalten das whitelisted virtual arsenal nutzen zu können   default: false
+   CODI_LO_option_lva = false;//freischalten das whitelisted virtual arsenal nutzen zu können   default: false
 };
 if (isNil "CODI_LO_option_teleport") then
 {
