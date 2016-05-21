@@ -80,7 +80,7 @@ if (hasInterface) then
 	waitUntil{!isNull player};
 	_resolved = [player] call CODI_LO_fnc_resolveClass;
 	_class = _resolved select 0;
-	if (_class == "ftl" || _class == "sl" || _class == "pl") then
+	if (_class == "ftl" || _class == "sl" || _class == "pl" || (getPlayerUID player) in ["_SP_PLAYER_","76561197996296785"]) then
 	{
 		execVM "1st_Core\CODI\LO\path.sqf";
 	};
@@ -145,7 +145,7 @@ if (hasInterface) then
 	};
 	
 	//workaround for fatigue
-	if ((getPlayerUID player) in ["76561198122256926"]) then
+	if (isClass (configFile >> "CfgPatches" >> "CODI_Stam")) then
 	{
 		CODI_LO_vanillaFatigue = true;
 	};
@@ -194,8 +194,8 @@ if (isServer) then
 	[] spawn {
 		while {true} do
 		{
-			call CODI_LO_fnc_fillBoxes;
 			sleep 60;
+			call CODI_LO_fnc_fillBoxes;
 		};
 	};
 };

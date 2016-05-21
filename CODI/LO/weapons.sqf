@@ -494,6 +494,9 @@ CODI_LO_fnc_lwmmg_ammo = {
 CODI_LO_fnc_titan_at_ammo = {
 	["Titan_AT", 3] call CODI_LO_fnc_addBackpackMagazine;
 };
+CODI_LO_fnc_titan_ap_ammo = {
+	["Titan_AP", 3] call CODI_LO_fnc_addBackpackMagazine;
+};
 CODI_LO_fnc_titan_aa_ammo = {
 	["Titan_AA", 3] call CODI_LO_fnc_addBackpackMagazine;
 };
@@ -655,6 +658,11 @@ CODI_LO_fnc_pzf3 = {
 CODI_LO_fnc_titan_at = {
 	["Titan_AT", 1] call CODI_LO_fnc_addBackpackMagazine;
 	CODI_LO_launcherMagazines = ["Titan_AT"];
+	CODI_LO_launcher = ["launch_B_Titan_short_F"];
+};
+CODI_LO_fnc_titan_ap = {
+	["Titan_AP", 1] call CODI_LO_fnc_addBackpackMagazine;
+	CODI_LO_launcherMagazines = ["Titan_AP"];
 	CODI_LO_launcher = ["launch_B_Titan_short_F"];
 };
 CODI_LO_fnc_titan_aa = {
