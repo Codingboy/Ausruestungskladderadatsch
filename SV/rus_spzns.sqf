@@ -42,7 +42,7 @@ CODI_LO_fnc_rflm_rus_spzns = {
    call CODI_LO_fnc_unarmed_rus_spzns;//dadurch sieht der rflm_ch_wood aus wie der unarmed_ch_wood
    CODI_LO_vest = ["rhs_6b23_digi_rifleman"];
    CODI_LO_helmet = ["rhs_6b47_bala","rhs_6b47_ess_bala"];
-   CODI_LO_weaponPacks = [["mp443","pp2000_folded","pmm"],["grenades_he_bp","grenades_flash_bp","grenades_smoke_bp"],["aek971mtk","ak12","akm","ak74mmtk","ak74m","asval_grip_npz],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
+   CODI_LO_weaponPacks = [["mp443","pp2000_folded","pmm"],["grenades_he_bp","grenades_flash_bp","grenades_smoke_bp"],["aek971mtk","ak12","akm","ak74mmtk","ak74m","asval_grip_npz"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
 };
 CODI_LO_fnc_cfr_rus_spzns = {
 	CODI_LO_backpackItems = CODI_LO_vestItems;
@@ -110,7 +110,7 @@ CODI_LO_fnc_dm_rus_spzns = {
 	CODI_LO_vestItems = [];
 	call CODI_LO_fnc_rflm_rus_spzns;
    CODI_LO_vest = ["rhs_6b23_digi_sniper"];
-	CODI_LO_weaponPacks set [2, ["SVDSNPZ","SVDMNPZ","SVDMCamoNPZ","SVDM","SVDMCamo","SVDS"]];
+	CODI_LO_weaponPacks set [2, ["SVDSNPZ","SVDMNPZ","SVDMCamoNPZ","SVDM","SVDMCamo","SVDS","vss"]];
 };
 CODI_LO_fnc_crew_rus_spzns = {
 	CODI_LO_backpackItems = CODI_LO_vestItems;
