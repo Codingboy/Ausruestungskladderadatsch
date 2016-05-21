@@ -128,8 +128,10 @@ class CfgVehicles
 	#include "CODI\LO\bw_tropen.hpp"
 	#include "CODI\LO\usa_ocp.hpp"
 	#include "SV\rus_emr.hpp"
+	#include "SV\rus_spzns.hpp"
 	#include "SV\pmc_dul.hpp"
 	#include "SV\pla_07d.hpp"
+	#include "SV\pla_07w.hpp"
 	class Man;
 	class CAManBase: Man
 	{
@@ -199,6 +201,13 @@ class CfgFactionClasses
 		icon = "";
 		side = 1;
 	};
+	class CODI_LO_rus_spzns
+	{
+		displayName = "1st rus_spzns";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
 	class CODI_LO_pmc_dul
 	{
 		displayName = "1st pmc_dul";
@@ -216,6 +225,13 @@ class CfgFactionClasses
 	class CODI_LO_pla_07d
 	{
 		displayName = "1st pla_07d";
+		priority = 100;
+		icon = "";
+		side = 1;
+	};
+	class CODI_LO_pla_07w
+	{
+		displayName = "1st pla_07w";
 		priority = 100;
 		icon = "";
 		side = 1;

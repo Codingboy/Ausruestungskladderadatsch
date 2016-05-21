@@ -39,7 +39,7 @@ CODI_LO_fnc_rflm_pmc_dul = {
    call CODI_LO_fnc_unarmed_pmc_dul;//dadurch sieht der rflm_ch_wood aus wie der unarmed_ch_wood
    CODI_LO_vest = ["V_PlateCarrier1_blk"];
    CODI_LO_helmet = ["rhsusf_opscore_rg_cover_pelt","rhsusf_bowman_cap","H_Cap_headphones","H_Cap_grn_BI","H_Cap_tan_specops_US"];
-   CODI_LO_weaponPacks = [["glock17","acpc2","fnx45"],["grenades_he","grenades_flash","grenades_smoke"],["auga1","akm","bcmjack","m4","f2000","rk62","tar21","fal","hk33"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
+   CODI_LO_weaponPacks = [["glock17","acpc2","fnx45"],["grenades_he","grenades_flash","grenades_smoke"],["auga1","akm","bcmjack","m4","f2000","rk62","tar21","fal","hk33","hk416"],[]];//darf nur bereits definierte waffen enthalten, siehe ingamenamen beim ausrüstungsdialog
 };
 CODI_LO_fnc_cfr_pmc_dul = {
    call CODI_LO_fnc_rflm_pmc_dul;//dadurch sieht der cfr_ch_wood aus wie der rflm_ch_wood und hat dessen Waffenauswahl
@@ -51,7 +51,7 @@ CODI_LO_fnc_medic_pmc_dul = {
 CODI_LO_fnc_ftl_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
 	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [2, ["fal_gl","g36_gl","akm_gl","tar21_gl","f2000_gl","auga3_gl"]];
+	CODI_LO_weaponPacks set [2, ["fal_gl","g36_gl","akm_gl","tar21_gl","f2000_gl","auga3_gl","hk416_gl"]];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_lmg_pmc_dul = {
@@ -66,7 +66,7 @@ CODI_LO_fnc_mmg_pmc_dul = {
 };
 CODI_LO_fnc_grn_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
-	CODI_LO_weaponPacks set [2, ["fal_gl","g36_gl","akm_gl","tar21_gl","f2000_gl","auga3_gl"]];
+	CODI_LO_weaponPacks set [2, ["fal_gl","g36_gl","akm_gl","tar21_gl","f2000_gl","auga3_gl","hk416_gl"]];
 };
 CODI_LO_fnc_eng_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;

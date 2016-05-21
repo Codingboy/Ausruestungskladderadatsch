@@ -85,7 +85,7 @@ CODI_LO_fnc_es_bw_tropen = {
 };
 CODI_LO_fnc_dm_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_weaponPacks set [2, ["psg1","sig556"]];
+	CODI_LO_weaponPacks set [2, ["psg1","sig556","g3sg1"]];
 };
 CODI_LO_fnc_crew_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;

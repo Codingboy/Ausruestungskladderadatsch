@@ -37,7 +37,7 @@ CODI_LO_fnc_unarmed_usmc_wood = {
 CODI_LO_fnc_rflm_usmc_wood = {
 	call CODI_LO_fnc_unarmed_usmc_wood;
 	CODI_LO_vest = ["rhsusf_spc_rifleman","MNP_Vest_USMC_2"];
-	CODI_LO_weaponPacks = [["fnx45","p99","m9"],["grenades_he","grenades_flash","grenades_smoke"],["m4","lar15"],[]];
+	CODI_LO_weaponPacks = [["fnx45","p99","m9"],["grenades_he","grenades_flash","grenades_smoke"],["m4","lar15","hk416"],[]];
 };
 CODI_LO_fnc_cfr_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
@@ -49,7 +49,7 @@ CODI_LO_fnc_medic_usmc_wood = {
 CODI_LO_fnc_ftl_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
 	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [2, ["m4_gl_ftl"]];
+	CODI_LO_weaponPacks set [2, ["m4_gl_ftl","hk416_gl"]];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_lmg_usmc_wood = {
@@ -69,7 +69,7 @@ CODI_LO_fnc_hmg_usmc_wood = {
 };
 CODI_LO_fnc_grn_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
-	CODI_LO_weaponPacks set [2, ["m4_gl"]];
+	CODI_LO_weaponPacks set [2, ["m4_gl","hk416_gl"]];
 };
 CODI_LO_fnc_eng_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
