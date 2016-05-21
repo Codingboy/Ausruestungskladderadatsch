@@ -1,2 +1,5 @@
 ausrüstungskisten munition und spezialmunitionen funktionieren nur mit zeus garantiert
 helicrew usmc, bw überarbeiten
+
+weapon.sqf
+	MP7A1

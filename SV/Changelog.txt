@@ -1,4 +1,29 @@
-10.0.2016
+21.05.2016
+#weapon.sqf(
+	+PP2000 Secondary
+	+PP2000 Primary
+	+HK416
+	+HK416+M320
+	+AS VAL Grip NPZ
+	+VSS Vintorez
+	+G3SG1
+	+AEK971 MTK
+	+rakurs to M1913 AK variants, VS121, M1913 RPK Variants and M1913 SVDs 
+	-removed RK62 optics since it can't take optics
+	switched capitals in SVDs to lowercase
+)
+usmc_desert.sqf
+	+HK416 + HK416 M320 to RFLM, GRN, FTL
+usmc_wood.sqf
+	+HK416 + HK416 M320 to RFLM, GRN, FTL
+bw_fleck.sqf
+	+G3SG1 to DM
+bw_tropen.sqf
+	+G3SG1 to DM
++pla_07w
++rus_spzns
+	
+10.05.2016
 #weapon.sqf (
 +QBZ-95-1
 +QBZ-95-1 GL
