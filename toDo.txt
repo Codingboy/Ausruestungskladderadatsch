@@ -3,3 +3,19 @@ helicrew usmc, bw überarbeiten
 
 weapon.sqf
 	MP7A1
+
+	rhs_weap_m27iar
+		hlc_50rnd_556x45_EPR
+		RH_qdss_nt4
+		rhsusf_acc_harris_bipod
+
+	arifle_MXM_F
+		ACE_30Rnd_65_Creedmor_mag
+		muzzle_snds_H
+		BWA3_acc_VarioRay_irlaser
+		RH_TD_ACB
+
+	hlc_rifle_MG36
+		hlc_100rnd_556x45_EPR_G36
+		RH_spr_mbs
+		HLC_Optic_G36dualoptic35x
