@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_rus_spzns") then
 {
-   CODI_LO_rus_spzns = ["medic","unarmed","rflm","cfr","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
+   CODI_LO_rus_spzns = ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
          CODI_LO_rus_spzns pushBack _x;
       };
    }
-   forEach ["medic","unarmed","rflm","cfr","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
+   forEach ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
 };
 CODI_LO_rus_spzns sort true;//alphabetisch sortieren
 //die Fraktion dem Ausrüstungskladderadatsch hinzufügen
@@ -70,14 +70,7 @@ CODI_LO_fnc_lmg_rus_spzns = {
 	CODI_LO_vestItems = [];
 	call CODI_LO_fnc_rflm_rus_spzns;
 	CODI_LO_backpack = ["B_Carryall_oli"];
-	CODI_LO_weaponPacks set [2, ["rpk12","rpk74"]];
-};
-CODI_LO_fnc_mmg_rus_spzns = {
-	CODI_LO_backpackItems = CODI_LO_vestItems;
-	CODI_LO_vestItems = [];
-	call CODI_LO_fnc_rflm_rus_spzns;
-	CODI_LO_backpack = ["B_Carryall_oli"];
-	CODI_LO_weaponPacks set [2, ["pkp"]];
+	CODI_LO_weaponPacks set [2, ["rpk12","rpk74","pkp"]];
 };
 CODI_LO_fnc_grn_rus_spzns = {
 	CODI_LO_backpackItems = CODI_LO_vestItems;

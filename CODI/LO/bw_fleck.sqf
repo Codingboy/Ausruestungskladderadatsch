@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_bw_fleck") then
 {
-	CODI_LO_bw_fleck = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	CODI_LO_bw_fleck = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
 			CODI_LO_bw_fleck pushBack _x;
 		};
 	}
-	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
 };
 CODI_LO_bw_fleck sort true;
 if (isNil "CODI_LO_colours") then
@@ -55,14 +55,9 @@ CODI_LO_fnc_ftl_bw_fleck = {
 CODI_LO_fnc_lmg_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
 	CODI_LO_backpack = ["BWA3_Carryall_Fleck"];
-	CODI_LO_weaponPacks set [2, ["mg4"]];
+	CODI_LO_weaponPacks set [2, ["mg4","mg5"]];
 };
 CODI_LO_fnc_mmg_bw_fleck = {
-	call CODI_LO_fnc_rflm_bw_fleck;
-	CODI_LO_backpack = ["BWA3_Carryall_Fleck"];
-	CODI_LO_weaponPacks set [2, ["mg5"]];
-};
-CODI_LO_fnc_hmg_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
 	CODI_LO_backpack = ["BWA3_Carryall_Fleck"];
 	CODI_LO_weaponPacks set [2, ["hk121","lwmmg"]];
