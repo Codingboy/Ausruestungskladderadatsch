@@ -107,7 +107,7 @@ if (hasInterface) then
 	{
 		//["Preload"] call BIS_fnc_arsenal;
 	};
-	[5] call TFAR_fnc_setVoiceVolume;
+	5 call TFAR_fnc_setVoiceVolume;
 
 	//workaround for ace featurebug "vanilla damage/no running"
 	/*[] spawn {
