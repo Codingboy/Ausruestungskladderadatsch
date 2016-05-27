@@ -31,7 +31,13 @@ switch (side _unit) do
 		_unit addGoggles "G_I_Diving";
 	};
 };
-while {vest _unit != ""} do
+_unit addItemToUniform "CODI_BFT_Tablet";
+_unit addItemToUniform "CODI_OFT_Tablet";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACE_IR_Strobe_Item";
+_unit addItemToUniform "ACE_DAGR";
+while {uniform _unit != "" && vest _unit != ""} do
 {
 	sleep 10;
 };
