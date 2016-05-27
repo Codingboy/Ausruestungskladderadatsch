@@ -150,7 +150,6 @@ CODI_LO_fnc_sl = {
 	[CODI_LO_binocular, "ACE_Yardage450"] call BIS_fnc_ArrayUnshift;
 	["ACE_EntrenchingTool"] call CODI_LO_fnc_addBackpackItem;
 	["ACE_DAGR"] call CODI_LO_fnc_addBackpackItem;
-	[CODI_LO_binocular, "ACE_MX2A"] call BIS_fnc_ArrayUnshift;
 };
 CODI_LO_fnc_cq = {
 	call CODI_LO_fnc_rflm;
