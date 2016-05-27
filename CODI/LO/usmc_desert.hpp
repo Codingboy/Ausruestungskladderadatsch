@@ -40,10 +40,6 @@ class CODI_LO_mmg_usmc_desert : CODI_LO_unarmed_usmc_desert
 {
 	displayName = "mmg";
 };
-class CODI_LO_hmg_usmc_desert : CODI_LO_unarmed_usmc_desert
-{
-	displayName = "hmg";
-};
 class CODI_LO_grn_usmc_desert : CODI_LO_unarmed_usmc_desert
 {
 	displayName = "grn";
@@ -135,10 +131,6 @@ class CODI_LO_sp_usmc_desert : CODI_LO_unarmed_usmc_desert
 class CODI_LO_pl_usmc_desert : CODI_LO_unarmed_usmc_desert
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_usmc_desert : CODI_LO_unarmed_usmc_desert
-{
-	displayName = "ps";
 };
 class CODI_LO_fac_usmc_desert : CODI_LO_unarmed_usmc_desert
 {

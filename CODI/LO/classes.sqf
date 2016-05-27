@@ -104,9 +104,6 @@ CODI_LO_fnc_lmg = {
 CODI_LO_fnc_mmg = {
 	call CODI_LO_fnc_lmg;
 };
-CODI_LO_fnc_hmg = {
-	call CODI_LO_fnc_lmg;
-};
 CODI_LO_fnc_grn = {
 	call CODI_LO_fnc_rflm;
 	[CODI_LO_binocular, "ACE_Yardage450"] call BIS_fnc_ArrayUnshift;
@@ -207,9 +204,6 @@ CODI_LO_fnc_sp = {
 CODI_LO_fnc_pl = {
 	call CODI_LO_fnc_rflm;
 	["CODI_Arty_Tablet"] call CODI_LO_fnc_addBackpackItem;
-};
-CODI_LO_fnc_ps = {
-	call CODI_LO_fnc_rflm;
 };
 CODI_LO_fnc_fac = {
 	call CODI_LO_fnc_rflm;

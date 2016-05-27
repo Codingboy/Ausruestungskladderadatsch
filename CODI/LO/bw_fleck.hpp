@@ -40,10 +40,6 @@ class CODI_LO_mmg_bw_fleck : CODI_LO_unarmed_bw_fleck
 {
 	displayName = "mmg";
 };
-class CODI_LO_hmg_bw_fleck : CODI_LO_unarmed_bw_fleck
-{
-	displayName = "hmg";
-};
 class CODI_LO_grn_bw_fleck : CODI_LO_unarmed_bw_fleck
 {
 	displayName = "grn";
@@ -135,10 +131,6 @@ class CODI_LO_sp_bw_fleck : CODI_LO_unarmed_bw_fleck
 class CODI_LO_pl_bw_fleck : CODI_LO_unarmed_bw_fleck
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_bw_fleck : CODI_LO_unarmed_bw_fleck
-{
-	displayName = "ps";
 };
 class CODI_LO_fac_bw_fleck : CODI_LO_unarmed_bw_fleck
 {

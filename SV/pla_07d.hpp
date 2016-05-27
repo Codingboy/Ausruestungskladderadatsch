@@ -36,10 +36,6 @@ class CODI_LO_lmg_pla_07d : CODI_LO_unarmed_pla_07d
 {
 	displayName = "lmg";
 };
-class CODI_LO_mmg_pla_07d : CODI_LO_unarmed_pla_07d
-{
-	displayName = "mmg";
-};
 class CODI_LO_grn_pla_07d : CODI_LO_unarmed_pla_07d
 {
 	displayName = "grn";
@@ -127,8 +123,4 @@ class CODI_LO_spotter_pla_07d : CODI_LO_unarmed_pla_07d
 class CODI_LO_pl_pla_07d : CODI_LO_unarmed_pla_07d
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_pla_07d : CODI_LO_unarmed_pla_07d
-{
-	displayName = "ps";
 };

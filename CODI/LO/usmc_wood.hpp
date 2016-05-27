@@ -40,10 +40,6 @@ class CODI_LO_mmg_usmc_wood : CODI_LO_unarmed_usmc_wood
 {
 	displayName = "mmg";
 };
-class CODI_LO_hmg_usmc_wood : CODI_LO_unarmed_usmc_wood
-{
-	displayName = "hmg";
-};
 class CODI_LO_grn_usmc_wood : CODI_LO_unarmed_usmc_wood
 {
 	displayName = "grn";
@@ -135,10 +131,6 @@ class CODI_LO_sp_usmc_wood : CODI_LO_unarmed_usmc_wood
 class CODI_LO_pl_usmc_wood : CODI_LO_unarmed_usmc_wood
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_usmc_wood : CODI_LO_unarmed_usmc_wood
-{
-	displayName = "ps";
 };
 class CODI_LO_fac_usmc_wood : CODI_LO_unarmed_usmc_wood
 {

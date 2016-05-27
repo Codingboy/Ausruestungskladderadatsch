@@ -36,10 +36,6 @@ class CODI_LO_lmg_rus_emr : CODI_LO_unarmed_rus_emr
 {
 	displayName = "lmg";
 };
-class CODI_LO_mmg_rus_emr : CODI_LO_unarmed_rus_emr
-{
-	displayName = "mmg";
-};
 class CODI_LO_grn_rus_emr : CODI_LO_unarmed_rus_emr
 {
 	displayName = "grn";
@@ -127,8 +123,4 @@ class CODI_LO_spotter_rus_emr : CODI_LO_unarmed_rus_emr
 class CODI_LO_pl_rus_emr : CODI_LO_unarmed_rus_emr
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_rus_emr : CODI_LO_unarmed_rus_emr
-{
-	displayName = "ps";
 };

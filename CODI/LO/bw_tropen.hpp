@@ -40,10 +40,6 @@ class CODI_LO_mmg_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
 	displayName = "mmg";
 };
-class CODI_LO_hmg_bw_tropen : CODI_LO_unarmed_bw_tropen
-{
-	displayName = "hmg";
-};
 class CODI_LO_grn_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
 	displayName = "grn";
@@ -135,10 +131,6 @@ class CODI_LO_sp_bw_tropen : CODI_LO_unarmed_bw_tropen
 class CODI_LO_pl_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_bw_tropen : CODI_LO_unarmed_bw_tropen
-{
-	displayName = "ps";
 };
 class CODI_LO_fac_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
