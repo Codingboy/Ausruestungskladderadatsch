@@ -86,7 +86,7 @@ CODI_LO_fnc_crew_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
 	CODI_LO_backpack = [];
 	[CODI_LO_helmet, "BWA3_CrewmanKSK_Tropen_Headset"] call BIS_fnc_ArrayUnshift;
-	CODI_LO_weaponPacks set [2, ["mp510"]];
+	CODI_LO_weaponPacks set [2, ["mp510","mp7"]];
 };
 CODI_LO_fnc_com_bw_tropen = {
 	call CODI_LO_fnc_crew_bw_tropen;
@@ -100,7 +100,7 @@ CODI_LO_fnc_sl_bw_tropen = {
 };
 CODI_LO_fnc_cq_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_weaponPacks set [2, ["hk53"]];
+	CODI_LO_weaponPacks set [2, ["hk53","mp7"]];
 };
 CODI_LO_fnc_mortar_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
