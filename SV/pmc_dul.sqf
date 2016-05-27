@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_pmc_dul") then
 {
-   CODI_LO_pmc_dul = ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
+   CODI_LO_pmc_dul = ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
          CODI_LO_pmc_dul pushBack _x;
       };
    }
-   forEach ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl","ps"];
+   forEach ["medic","unarmed","rflm","cfr","ftl","lmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","flanker","sniper","spotter","pl"];
 };
 CODI_LO_pmc_dul sort true;//alphabetisch sortieren
 //die Fraktion dem Ausrüstungskladderadatsch hinzufügen
@@ -182,8 +182,4 @@ CODI_LO_fnc_pl_pmc_dul = {
 	CODI_LO_helmet = ["H_Cap_blk_ION"];
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
-};
-CODI_LO_fnc_ps_pmc_dul = {
-	call CODI_LO_fnc_pl_pmc_dul;
-	CODI_LO_helmet = ["LOP_H_Cowboy_hat"];
 };

@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_bw_fleck") then
 {
-	CODI_LO_bw_fleck = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	CODI_LO_bw_fleck = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
 			CODI_LO_bw_fleck pushBack _x;
 		};
 	}
-	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
 };
 CODI_LO_bw_fleck sort true;
 if (isNil "CODI_LO_colours") then
@@ -199,10 +199,6 @@ CODI_LO_fnc_pl_bw_fleck = {
 	CODI_LO_helmet = ["H_Beret_02"];
 	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
-};
-CODI_LO_fnc_ps_bw_fleck = {
-	call CODI_LO_fnc_pl_bw_fleck;
-	CODI_LO_helmet = ["H_Beret_blk"];
 };
 CODI_LO_fnc_fac_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;
