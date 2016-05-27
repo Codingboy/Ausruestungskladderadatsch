@@ -41,8 +41,6 @@ while {uniform _unit != "" && vest _unit != ""} do
 {
 	sleep 10;
 };
-removeUniform _unit;
-removeVest _unit;
 removeGoggles _unit;
 _unit forceAddUniform _uniform;
 _unit addVest _vest;
