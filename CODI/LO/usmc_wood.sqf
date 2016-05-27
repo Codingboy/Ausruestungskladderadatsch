@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_usmc_wood") then
 {
-	CODI_LO_usmc_wood = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	CODI_LO_usmc_wood = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
 			CODI_LO_usmc_wood pushBack _x;
 		};
 	}
-	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
+	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","ps","fac"];
 };
 CODI_LO_usmc_wood sort true;
 if (isNil "CODI_LO_colours") then
@@ -55,14 +55,9 @@ CODI_LO_fnc_ftl_usmc_wood = {
 CODI_LO_fnc_lmg_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
 	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [2, ["m249"]];
+	CODI_LO_weaponPacks set [2, ["m249","m27","m60"]];
 };
 CODI_LO_fnc_mmg_usmc_wood = {
-	call CODI_LO_fnc_rflm_usmc_wood;
-	CODI_LO_backpack = ["B_Carryall_cbr"];
-	CODI_LO_weaponPacks set [2, ["m60"]];
-};
-CODI_LO_fnc_hmg_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
 	CODI_LO_backpack = ["B_Carryall_cbr"];
 	CODI_LO_weaponPacks set [2, ["hk121","lwmmg"]];
@@ -158,7 +153,7 @@ CODI_LO_fnc_ac_usmc_wood = {
 };
 CODI_LO_fnc_lat_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;
-	CODI_LO_weaponPacks set [3, ["nlaw"]];
+	CODI_LO_weaponPacks set [3, ["nlaw","smaw"]];
 };
 CODI_LO_fnc_at_usmc_wood = {
 	call CODI_LO_fnc_rflm_usmc_wood;

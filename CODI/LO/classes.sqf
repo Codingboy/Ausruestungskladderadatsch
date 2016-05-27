@@ -129,6 +129,8 @@ CODI_LO_fnc_es = {
 	["MineDetector"] call CODI_LO_fnc_addBackpackItem;
 	["ACE_DefusalKit"] call CODI_LO_fnc_addBackpackItem;
 	["ACE_DeadManSwitch"] call CODI_LO_fnc_addBackpackItem;
+	["Revo_mD_battery"] call CODI_LO_fnc_addBackpackItem;
+	["Revo_mD_Flag"] call CODI_LO_fnc_addBackpackItem;
 	player setVariable ["ACE_isEOD", true, true];
 };
 CODI_LO_fnc_dm = {

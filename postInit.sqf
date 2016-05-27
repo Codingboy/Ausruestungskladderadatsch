@@ -9,6 +9,7 @@ if (isNil "CODI_LO_option_lva") then
 {
 	CODI_LO_option_lva = false;//editable
 };
+CODI_LO_option_lva = false;//currently not working
 if (isNil "CODI_LO_option_para") then
 {
 	CODI_LO_option_para = false;
@@ -107,7 +108,7 @@ if (hasInterface) then
 	{
 		//["Preload"] call BIS_fnc_arsenal;
 	};
-	[5] call TFAR_fnc_setVoiceVolume;
+	5 call TFAR_fnc_setVoiceVolume;
 
 	//workaround for ace featurebug "vanilla damage/no running"
 	/*[] spawn {
