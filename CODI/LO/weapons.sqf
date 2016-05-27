@@ -545,7 +545,7 @@ CODI_LO_fnc_mxm = {
 	CODI_LO_primaryWeaponLaser = ["BWA3_acc_VarioRay_irlaser"];
 	CODI_LO_primaryWeaponBipod = ["RH_TD_ACB"];
 	CODI_LO_primaryWeaponOptic = ["rhsusf_acc_SpecterDR_A_3d","optic_SOS","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_DMS","optic_KHS_blk","optic_KHS_hex","optic_KHS_tan","optic_LRPS","optic_NVS","RH_anpvs4","RH_anpvs10"];
-};<
+};
 
 
 
