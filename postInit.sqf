@@ -9,6 +9,7 @@ if (isNil "CODI_LO_option_lva") then
 {
 	CODI_LO_option_lva = false;//editable
 };
+CODI_LO_option_lva = false;//currently not working
 if (isNil "CODI_LO_option_para") then
 {
 	CODI_LO_option_para = false;
