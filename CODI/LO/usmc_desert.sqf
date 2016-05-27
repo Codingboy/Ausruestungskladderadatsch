@@ -152,7 +152,7 @@ CODI_LO_fnc_ac_usmc_desert = {
 };
 CODI_LO_fnc_lat_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;
-	CODI_LO_weaponPacks set [3, ["nlaw"]];
+	CODI_LO_weaponPacks set [3, ["nlaw","smaw"]];
 };
 CODI_LO_fnc_at_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;

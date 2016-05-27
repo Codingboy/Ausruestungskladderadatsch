@@ -148,7 +148,7 @@ CODI_LO_fnc_ac_pmc_dul = {
 };
 CODI_LO_fnc_lat_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
-	CODI_LO_weaponPacks set [3, ["rpg26"]];
+	CODI_LO_weaponPacks set [3, ["rpg26","smaw"]];
 };
 CODI_LO_fnc_at_pmc_dul = {
 	call CODI_LO_fnc_rflm_pmc_dul;
