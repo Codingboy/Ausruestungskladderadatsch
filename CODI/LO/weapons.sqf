@@ -532,7 +532,8 @@ CODI_LO_fnc_vss = {
 	CODI_LO_primaryWeaponOptic = ["rhs_acc_pso1m21","rhs_acc_1p29","rhs_acc_1pn93_1","rhs_acc_rakursPM"];
 };
 CODI_LO_fnc_g3sg1 = {
-	["hlc_20rnd_762x51_Mk316_G3", 8] call CODI_LO_fnc_addVestMagazine;
+	["hlc_20rnd_762x51_Mk316_G3", 6] call CODI_LO_fnc_addVestMagazine;
+	["hlc_20rnd_762x51_Mk316_G3", 2] call CODI_LO_fnc_addBackpackMagazine;
 	CODI_LO_primaryWeapon = ["hlc_rifle_g3sg1"];
 	CODI_LO_primaryWeaponOptic = ["HLC_Optic_ZFSG1"];
 	CODI_LO_primaryWeaponSilencer = ["RH_fa762"];
