@@ -124,10 +124,6 @@ class CODI_LO_spotter_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
 	displayName = "spotter";
 };
-class CODI_LO_sp_bw_tropen : CODI_LO_unarmed_bw_tropen
-{
-	displayName = "sp";
-};
 class CODI_LO_pl_bw_tropen : CODI_LO_unarmed_bw_tropen
 {
 	displayName = "pl";

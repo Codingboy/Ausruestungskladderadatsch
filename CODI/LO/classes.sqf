@@ -197,9 +197,6 @@ CODI_LO_fnc_spotter = {
 	[CODI_LO_binocular, "ACE_Vector"] call BIS_fnc_ArrayUnshift;
 	[CODI_LO_binocular, "Rangefinder"] call BIS_fnc_ArrayUnshift;
 };
-CODI_LO_fnc_sp = {
-	call CODI_LO_fnc_rflm;
-};
 CODI_LO_fnc_pl = {
 	call CODI_LO_fnc_rflm;
 	["CODI_Arty_Tablet"] call CODI_LO_fnc_addBackpackItem;

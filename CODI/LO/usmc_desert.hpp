@@ -124,10 +124,6 @@ class CODI_LO_spotter_usmc_desert : CODI_LO_unarmed_usmc_desert
 {
 	displayName = "spotter";
 };
-class CODI_LO_sp_usmc_desert : CODI_LO_unarmed_usmc_desert
-{
-	displayName = "sp";
-};
 class CODI_LO_pl_usmc_desert : CODI_LO_unarmed_usmc_desert
 {
 	displayName = "pl";

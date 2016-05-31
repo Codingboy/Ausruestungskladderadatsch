@@ -124,10 +124,6 @@ class CODI_LO_spotter_usmc_wood : CODI_LO_unarmed_usmc_wood
 {
 	displayName = "spotter";
 };
-class CODI_LO_sp_usmc_wood : CODI_LO_unarmed_usmc_wood
-{
-	displayName = "sp";
-};
 class CODI_LO_pl_usmc_wood : CODI_LO_unarmed_usmc_wood
 {
 	displayName = "pl";

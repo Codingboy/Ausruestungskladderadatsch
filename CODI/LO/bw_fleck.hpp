@@ -124,10 +124,6 @@ class CODI_LO_spotter_bw_fleck : CODI_LO_unarmed_bw_fleck
 {
 	displayName = "spotter";
 };
-class CODI_LO_sp_bw_fleck : CODI_LO_unarmed_bw_fleck
-{
-	displayName = "sp";
-};
 class CODI_LO_pl_bw_fleck : CODI_LO_unarmed_bw_fleck
 {
 	displayName = "pl";

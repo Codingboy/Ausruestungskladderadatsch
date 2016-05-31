@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_usmc_desert") then
 {
-	CODI_LO_usmc_desert = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
+	CODI_LO_usmc_desert = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","pl","fac"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
 			CODI_LO_usmc_desert pushBack _x;
 		};
 	}
-	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
+	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","pl","fac"];
 };
 CODI_LO_usmc_desert sort true;
 if (isNil "CODI_LO_colours") then
@@ -80,7 +80,7 @@ CODI_LO_fnc_es_usmc_desert = {
 };
 CODI_LO_fnc_dm_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;
-	CODI_LO_weaponPacks set [2, ["m14","sig556"]];
+	CODI_LO_weaponPacks set [2, ["m14","sig556","lar15_sp"]];
 };
 CODI_LO_fnc_crew_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;
@@ -188,10 +188,6 @@ CODI_LO_fnc_sniper_usmc_desert = {
 CODI_LO_fnc_spotter_usmc_desert = {
 	call CODI_LO_fnc_flanker_usmc_desert;
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
-};
-CODI_LO_fnc_sp_usmc_desert = {
-	call CODI_LO_fnc_rflm_usmc_desert;
-	CODI_LO_weaponPacks set [2, ["lar15_sp"]];
 };
 CODI_LO_fnc_pl_usmc_desert = {
 	call CODI_LO_fnc_rflm_usmc_desert;
