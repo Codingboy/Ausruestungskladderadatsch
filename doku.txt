@@ -217,7 +217,6 @@ Medic (medic) - Soldat mit besseren Medizinkenntnissen als cfr und mehr -Materia
 Fireteamlead (ftl) - Soldat, der ein Fireteam führt
 Squadlead (sl) Soldat, der ein Squad führt
 Platoonlead (pl) - Soldat, der ein Platoon führt
-Platoonseargent (ps) - Soldat, der den pl unterstützt
 
 Light Machinegunner (lmg) - Soldat mit leichtem MG (5,56mm - 6,5mm)
 Medium Machinegunner (mmg) - Soldat mit mittlerem MG (7,62mm)
@@ -236,8 +235,7 @@ Anti Tank (at) - Soldat mit gelenktem AT-Werfer
 Anti Air (aa) - Soldat mit AA-Werfer
 Ammo Carrier (ac) - Soldat, der Munition für andere trägt
 
-Semi Precision (sp) - Soldat mit Präzisionsgewehr (5,56mm - 6,5mm)
-Designated Marksman (dm) - Soldat mit Präzisionsgewehr (7,62mm)
+Designated Marksman (dm) - Soldat mit Präzisionsgewehr (5,56mm - 7,62mm)
 Sniper (sniper) - Soldat, der einzelne Prioritätsziele über größere Distanz aufklärt und bekämpft
 Spotter (spotter) - Soldat, der mit einem sniper zusammenarbeitet
 Flanker (flanker) - Soldat, der im Nahbereich unterstützt

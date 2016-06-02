@@ -102,6 +102,10 @@ if (hasInterface) then
 			[player] call CODI_LO_fnc_initialEquip;
 		};
 		["Terminate"] call BIS_fnc_EGSpectator;
+		if ((getPlayerUID player) in ["76561197996296785"]) then
+		{
+			player addAction ["Debug Console", {(finddisplay 46) createdisplay "RscDisplayDebugPublic";}];
+		};
 	}];
 	
 	if (count playableUnits != 0) then
