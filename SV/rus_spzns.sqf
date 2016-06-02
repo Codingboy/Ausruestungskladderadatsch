@@ -202,7 +202,7 @@ CODI_LO_fnc_at_rus_spzns = {
 	CODI_LO_backpackItems = CODI_LO_vestItems + CODI_LO_backpackItems;
 	CODI_LO_vestItems = [];
 	call CODI_LO_fnc_rflm_rus_spzns;
-	CODI_LO_backpack = ["rhs_rpg_empty"];
+	CODI_LO_backpack = ["B_Carryall_oli"];
 	CODI_LO_weaponPacks set [3, ["rpg7"]];
 };
 CODI_LO_fnc_aa_rus_spzns = {
