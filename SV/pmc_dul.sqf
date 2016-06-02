@@ -29,7 +29,7 @@ else
    forEach ["pmc_dul"];
 };
 CODI_LO_fnc_unarmed_pmc_dul = {
-   CODI_LO_uniform = ["LOP_U_PMC_Fatigue_01","LOP_U_PMC_Fatigue_03","LOP_U_PMC_Fatigue_04"];
+   CODI_LO_uniform = ["U_I_G_resistanceLeader_F","U_BG_Guerrilla_6_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_BG_Guerilla2_3","U_C_Journalist","MNP_CombatUniform_IR_BSJ_Med_B","MNP_CombatUniform_ASA_GC3"];
    CODI_LO_vest = ["V_PlateCarrier1_blk"];
    CODI_LO_backpack = ["rhs_assault_umbts","rhsusf_assault_eagleaiii_coy"];
    CODI_LO_helmet = ["rhsusf_opscore_rg_cover_pelt","rhsusf_bowman_cap","H_Cap_headphones","H_Cap_grn_BI","H_Cap_tan_specops_US"];
