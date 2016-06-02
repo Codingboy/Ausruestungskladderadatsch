@@ -40,10 +40,6 @@ class CODI_LO_mmg_usa_ocp : CODI_LO_unarmed_usa_ocp
 {
 	displayName = "mmg";
 };
-class CODI_LO_hmg_usa_ocp : CODI_LO_unarmed_usa_ocp
-{
-	displayName = "hmg";
-};
 class CODI_LO_grn_usa_ocp : CODI_LO_unarmed_usa_ocp
 {
 	displayName = "grn";
@@ -128,17 +124,9 @@ class CODI_LO_spotter_usa_ocp : CODI_LO_unarmed_usa_ocp
 {
 	displayName = "spotter";
 };
-class CODI_LO_sp_usa_ocp : CODI_LO_unarmed_usa_ocp
-{
-	displayName = "sp";
-};
 class CODI_LO_pl_usa_ocp : CODI_LO_unarmed_usa_ocp
 {
 	displayName = "pl";
-};
-class CODI_LO_ps_usa_ocp : CODI_LO_unarmed_usa_ocp
-{
-	displayName = "ps";
 };
 class CODI_LO_fac_usa_ocp : CODI_LO_unarmed_usa_ocp
 {

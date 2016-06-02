@@ -1,6 +1,6 @@
 if (isNil "CODI_LO_usa_ocp") then
 {
-	CODI_LO_usa_ocp = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
+	CODI_LO_usa_ocp = ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","pl","fac"];
 }
 else
 {
@@ -10,7 +10,7 @@ else
 			CODI_LO_usa_ocp pushBack _x;
 		};
 	}
-	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","hmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","sp","pl","fac"];
+	forEach ["unarmed","rflm","cfr","medic","ftl","lmg","mmg","grn","eng","uav","es","dm","crew","com","sl","cq","mortar","amortar","pilot","helipilot","helicrew","ac","lat","at","aa","sniper","flanker","spotter","pl","fac"];
 };
 CODI_LO_usa_ocp sort true;
 if (isNil "CODI_LO_colours") then
@@ -54,14 +54,9 @@ CODI_LO_fnc_ftl_usa_ocp = {
 CODI_LO_fnc_lmg_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
 	CODI_LO_backpack = ["B_Carryall_mcamo"];
-	CODI_LO_weaponPacks set [2, ["m249"]];
+	CODI_LO_weaponPacks set [2, ["m249","m60"]];
 };
 CODI_LO_fnc_mmg_usa_ocp = {
-	call CODI_LO_fnc_rflm_usa_ocp;
-	CODI_LO_backpack = ["B_Carryall_mcamo"];
-	CODI_LO_weaponPacks set [2, ["m60"]];
-};
-CODI_LO_fnc_hmg_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
 	CODI_LO_backpack = ["B_Carryall_mcamo"];
 	CODI_LO_weaponPacks set [2, ["hk121","lwmmg"]];
@@ -84,7 +79,7 @@ CODI_LO_fnc_es_usa_ocp = {
 };
 CODI_LO_fnc_dm_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
-	CODI_LO_weaponPacks set [2, ["m14","sig556"]];
+	CODI_LO_weaponPacks set [2, ["m14","sig556","lar15_sp"]];
 };
 CODI_LO_fnc_crew_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
@@ -193,10 +188,6 @@ CODI_LO_fnc_sniper_usa_ocp = {
 CODI_LO_fnc_spotter_usa_ocp = {
 	call CODI_LO_fnc_flanker_usa_ocp;
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
-};
-CODI_LO_fnc_sp_usa_ocp = {
-	call CODI_LO_fnc_rflm_usa_ocp;
-	CODI_LO_weaponPacks set [2, ["lar15_sp"]];
 };
 CODI_LO_fnc_pl_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
