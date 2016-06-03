@@ -507,7 +507,7 @@ CODI_LO_fnc_fillBoxes = {
 CODI_LO_headsetOn = true;
 CODI_LO_fnc_lowerHeadSet = {
 	private["_volume"];
-	_volume = 3;
+	_volume = 4;
 	if (call TFAR_fnc_haveSWRadio) then
 	{
 		CODI_LO_swVolume = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwVolume;
