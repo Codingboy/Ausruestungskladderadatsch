@@ -257,7 +257,7 @@ CODI_Medical_fnc_medicHint = {
 	forEach [player];
 	hintSilent _text;
 };
-CODI_Medical_fnc_medicMonitor = {
+/*CODI_Medical_fnc_medicMonitor = {
 	private["_unit","_unconscious","_unconsciousPrev"];
 	_unit = _this select 0;
 	_unconsciousPrev = false;
@@ -278,5 +278,24 @@ CODI_Medical_fnc_medicMonitor = {
 			_unconsciousPrev = false;
 		};
 		_unconsciousPrev = _unconscious;
+	};
+};*/
+CODI_Medical_fnc_medicMonitor = {
+	private["_unconscious","_unconsciousPrev"];
+	_unconsciousPrev = false;
+	while {alive player} do
+	{
+		sleep 1;
+		_unconscious = player getVariable ["CODI_MS_unconscious", 0];
+		if (_unconscious == 0 && _unconsciousPrev) then
+		{
+			CODI_MS_debug = false;
+			hintSilent "";
+		};
+		if (_unconscious > 0) then
+		{
+			CODI_MS_debug = true;
+		};
+		_unconsciousPrev = _unconscious > 0;
 	};
 };

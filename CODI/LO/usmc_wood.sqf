@@ -131,8 +131,8 @@ CODI_LO_fnc_helicrew_usmc_wood = {
 	CODI_LO_helmet = ["H_CrewHelmetHeli_B"];
 	CODI_LO_uniformItems = [];
 	CODI_LO_vestItems = [];
-	["ACE_fieldDressing", 10] call CODI_LO_fnc_addUniformItem;
-	["ACE_morphine", 2] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Bandage", 10] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Morphine", 2] call CODI_LO_fnc_addUniformItem;
 	["ACE_Flashlight_KSF1"] call CODI_LO_fnc_addUniformItem;
 	["ACE_MapTools"] call CODI_LO_fnc_addUniformItem;
 	["ACE_microDAGR"] call CODI_LO_fnc_addUniformItem;
@@ -225,11 +225,11 @@ CODI_LO_fnc_medicBox_usmc_wood = {
 	_box = param[0, objNull];
 	if (ace_medical_level == 2) then
 	{
-		_box addItemCargoGlobal ["ACE_morphine", 20];
+		_box addItemCargoGlobal ["CODI_MS_Item_Morphine", 20];
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
 		_box addItemCargoGlobal ["ACE_packingBandage", 30];
 		_box addItemCargoGlobal ["ACE_elasticBandage", 30];
-		_box addItemCargoGlobal ["ACE_fieldDressing", 30];
+		_box addItemCargoGlobal ["CODI_MS_Item_Bandage", 30];
 		_box addItemCargoGlobal ["ACE_quikclot", 30];
 		_box addItemCargoGlobal ["ACE_salineIV", 15];
 		_box addItemCargoGlobal ["ACE_salineIV_500", 15];
@@ -237,9 +237,9 @@ CODI_LO_fnc_medicBox_usmc_wood = {
 	}
 	else
 	{
-		_box addItemCargoGlobal ["ACE_morphine", 20];
+		_box addItemCargoGlobal ["CODI_MS_Item_Morphine", 20];
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
-		_box addItemCargoGlobal ["ACE_fieldDressing", 80];
+		_box addItemCargoGlobal ["CODI_MS_Item_Bandage", 80];
 		_box addItemCargoGlobal ["ACE_bloodIV", 15];
 	};
 };

@@ -131,8 +131,8 @@ CODI_LO_fnc_helicrew_bw_tropen = {
 	CODI_LO_helmet = ["BWA3_Knighthelm","H_CrewHelmetHeli_B"];
 	CODI_LO_uniformItems = [];
 	CODI_LO_vestItems = [];
-	["ACE_fieldDressing", 10] call CODI_LO_fnc_addUniformItem;
-	["ACE_morphine", 2] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Bandage", 10] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Morphine", 2] call CODI_LO_fnc_addUniformItem;
 	["ACE_Flashlight_KSF1"] call CODI_LO_fnc_addUniformItem;
 	["ACE_MapTools"] call CODI_LO_fnc_addUniformItem;
 	["ACE_microDAGR"] call CODI_LO_fnc_addUniformItem;

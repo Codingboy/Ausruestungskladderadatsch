@@ -6,7 +6,7 @@ CODI_LO_fnc_unarmed = {
 	CODI_LO_compass = ["ItemCompass"];
 	CODI_LO_gps = ["ItemGPS"];
 	["ACE_EarPlugs"] call CODI_LO_fnc_addUniformItem;
-	if (ace_medical_level == 2) then
+	/*if (ace_medical_level == 2) then
 	{
 		["ACE_fieldDressing", 14] call CODI_LO_fnc_addUniformItem;
 		["ACE_morphine", 2] call CODI_LO_fnc_addUniformItem;
@@ -16,7 +16,11 @@ CODI_LO_fnc_unarmed = {
 	{
 		["ACE_morphine", 2] call CODI_LO_fnc_addUniformItem;
 		["ACE_fieldDressing", 15] call CODI_LO_fnc_addUniformItem;
-	};
+	};*/
+	["CODI_MS_Item_Bandage", 10] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_XStat", 2] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Morphine", 2] call CODI_LO_fnc_addUniformItem;
+	["CODI_MS_Item_Tourniquet", 1] call CODI_LO_fnc_addUniformItem;
 	["SmokeShellGreen", 2] call CODI_LO_fnc_addUniformItem;
 	["Chemlight_green", 1] call CODI_LO_fnc_addUniformItem;
 	["ACE_HandFlare_Green", 1] call CODI_LO_fnc_addUniformItem;
@@ -32,7 +36,7 @@ CODI_LO_fnc_rflm = {
 };
 CODI_LO_fnc_cfr = {
 	call CODI_LO_fnc_rflm;
-	if (ace_medical_level == 2) then
+	/*if (ace_medical_level == 2) then
 	{
 		["ACE_morphine", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_epinephrine", 10] call CODI_LO_fnc_addBackpackItem;
@@ -55,12 +59,19 @@ CODI_LO_fnc_cfr = {
 		["ACE_fieldDressing", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 5] call CODI_LO_fnc_addBackpackItem;
 		["ACE_bloodIV", 6] call CODI_LO_fnc_addBackpackItem;
-	};
+	};*/
+	["CODI_MS_Item_Bandage", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Morphine", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_XStat", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_QuikClot", 15] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Tourniquet", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Saline", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Epinephrine", 5] call CODI_LO_fnc_addBackpackItem;
 	player setVariable ["ACE_Medical_medicClass", 1, true];
 };
 CODI_LO_fnc_medic = {
 	call CODI_LO_fnc_rflm;
-	if (ace_medical_level == 2) then
+	/*if (ace_medical_level == 2) then
 	{
 		["ACE_morphine", 15] call CODI_LO_fnc_addBackpackItem;
 		["ACE_epinephrine", 15] call CODI_LO_fnc_addBackpackItem;
@@ -83,7 +94,15 @@ CODI_LO_fnc_medic = {
 		["ACE_fieldDressing", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_quikclot", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_bloodIV", 10] call CODI_LO_fnc_addBackpackItem;
-	};
+	};*/
+	["CODI_MS_Item_Bandage", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Morphine", 20] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_SewingKit", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_QuikClot", 15] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Blood", 20] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Naloxone", 5] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Epinephrine", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Adenosine", 10] call CODI_LO_fnc_addBackpackItem;
 	player setVariable ["ACE_Medical_medicClass", 1, true];
 };
 CODI_LO_fnc_ftl = {
@@ -149,8 +168,8 @@ CODI_LO_fnc_sl = {
 };
 CODI_LO_fnc_cq = {
 	call CODI_LO_fnc_rflm;
-	["ACE_morphine", 2] call CODI_LO_fnc_addBackpackItem;
-	["ACE_fieldDressing", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Morphine", 2] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Bandage", 10] call CODI_LO_fnc_addBackpackItem;
 };
 CODI_LO_fnc_mortar = {
 	call CODI_LO_fnc_rflm;
