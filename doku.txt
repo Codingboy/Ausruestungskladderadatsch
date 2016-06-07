@@ -21,7 +21,6 @@ CODI_LO_restrictedClass = true;//false=keine einschränkung der Klassen, true=ei
 CODI_LO_equipOnRespawn = true;//einheit wird bei respawn neu ausgerüstet   default: true
 CODI_LO_noShotsAtMissionEnd = true;//einheit bekommt bei missionsende alle waffen und items abgenommen   default: true
 CODI_LO_setCallsigns = true;//Callsigns werden automatisch benannt falls die einheiten nach dem Schame "Alpha - FTL" benannt wurden   default: false
-CODI_LO_cleanup = true;//true um veraltete leichen/wracks/... zu löschen
 if (isNil "CODI_LO_option_va") then
 {
    CODI_LO_option_va = false;//freischalten das virtual arsenal nutzen zu können   default: false
@@ -53,72 +52,6 @@ CODI_LO_postLoadout = {//callback um ausrüstung anzupassen, darf keinen Seitene
 	_class = _resolved select 0;//rflm
 	_colour = _resolved select 1;//usmc_wood
 	/*
-	if (_class == "ftl") then
-	{
-		["CODI_VArty_Tablet"] call CODI_LO_fnc_addBackpackItem;
-	};
-	if (_colour == "usmc_wood") then
-	{
-		if (count(CODI_LO_uniform) != 0) then
-		{
-			if ((CODI_LO_uniform select 0) == "rhs_uniform_FROG01_wd") then
-			{
-				[CODI_LO_uniform, "MNP_CombatUniform_USMC_T"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_vest) != 0) then
-		{
-			if ((CODI_LO_vest select 0) == "rhsusf_spc" || (CODI_LO_vest select 0) == "rhsusf_spc_rifleman") then
-			{
-				[CODI_LO_vest, "MNP_Vest_USMC_2"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_backpack) != 0) then
-		{
-			if ((CODI_LO_backpack select 0) == "rhsusf_assault_eagleaiii_coy") then
-			{
-				[CODI_LO_backpack, "B_Carryall_cbr"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_helmet) != 0) then
-		{
-			if ((CODI_LO_helmet select 0) == "rhsusf_mich_helmet_marpatwd") then
-			{
-				[CODI_LO_helmet, "MNP_Helmet_USMC"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-	};
-	if (_colour == "usmc_desert") then
-	{
-		if (count(CODI_LO_uniform) != 0) then
-		{
-			if ((CODI_LO_uniform select 0) == "rhs_uniform_FROG01_d") then
-			{
-				[CODI_LO_uniform, "MNP_CombatUniform_USMC_D"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_vest) != 0) then
-		{
-			if ((CODI_LO_vest select 0) == "rhsusf_spc" || (CODI_LO_vest select 0) == "rhsusf_spc_rifleman") then
-			{
-				[CODI_LO_vest, "MNP_Vest_USMC_2"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_backpack) != 0) then
-		{
-			if ((CODI_LO_backpack select 0) == "rhsusf_assault_eagleaiii_coy") then
-			{
-				[CODI_LO_backpack, "B_Carryall_cbr"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-		if (count(CODI_LO_helmet) != 0) then
-		{
-			if ((CODI_LO_helmet select 0) == "rhsusf_mich_helmet_marpatd") then
-			{
-				[CODI_LO_helmet, "MNP_Helmet_USMC_D"] call BIS_fnc_ArrayUnshift;
-			};
-		};
-	};
 	CODI_LO_uniform = [];
 	CODI_LO_vest = [];
 	CODI_LO_backpack = [];
@@ -135,7 +68,7 @@ CODI_LO_postLoadout = {//callback um ausrüstung anzupassen, darf keinen Seitene
 	CODI_LO_uniformItems = [];
 	CODI_LO_vestItems = [];
 	CODI_LO_backpackItems = [];
-	CODI_LO_weaponPacks = [];//auf einen wert (CODI_LO_weaponPacks = ["m4","g36"];) setzen
+	CODI_LO_weaponPacks = [[],[],[],[]];//auf einen wert (CODI_LO_weaponPacks set [2,["m4","g36"]];) setzen
 	*/
 };
 CODI_LO_postWeaponLoadout = {//callback um bewaffnung anzupassen, darf keinen Seiteneffekt haben (nur variablen dürfen geändert werden, addWeapon o.ä. sind nicht aufzurufen)
@@ -218,11 +151,8 @@ Fireteamlead (ftl) - Soldat, der ein Fireteam führt
 Squadlead (sl) Soldat, der ein Squad führt
 Platoonlead (pl) - Soldat, der ein Platoon führt
 
-Light Machinegunner (lmg) - Soldat mit leichtem MG (5,56mm - 6,5mm)
-Medium Machinegunner (mmg) - Soldat mit mittlerem MG (7,62mm)
-Assistant Medium Machinegunner (ammg) - trägt Munition für mmg
-Heavy Machinegunner (hmg) - Soldat mit schwerem MG (>7,62mm)
-Assistant Heavy Machinegunner (ahmg) - trägt Munition für hmg
+Light Machinegunner (lmg) - Soldat mit leichtem MG (5,56mm - 7,62mm)
+Medium Machinegunner (mmg) - Soldat mit mittlerem MG (>7,62mm)
 
 Grenadier (grn) - Soldat mit Unterlaufgranatwerfer
 Explosive Specialist (es) - Soldat, der Spregmittel legen und entschärfen kann
