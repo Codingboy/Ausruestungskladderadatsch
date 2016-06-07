@@ -4,7 +4,7 @@ class CODI_LO_lo
 	onLoad = "_this execVM '\1st_Core\CODI\LO\initLOGUI.sqf';";
 	class controls
 	{
-/* #Wucilo
+/* #Resyno
 $[
 	1.063,
 	["asd",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
@@ -16,11 +16,13 @@ $[
 	[2102,"Pistol",[1,"",["0.436979 * safezoneW + safezoneX","0.445021 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[1003,"",[1,"Granaten",["0.379688 * safezoneW + safezoneX","0.489004 * safezoneH + safezoneY","0.0515625 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[1004,"",[1,"Gewehr",["0.379688 * safezoneW + safezoneX","0.532987 * safezoneH + safezoneY","0.0515625 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1005,"",[1,"Werfer",["0.379688 * safezoneW + safezoneX","0.57697 * safezoneH + safezoneY","0.0515625 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1005,"",[1,"Optik",["0.379688 * safezoneW + safezoneX","0.57697 * safezoneH + safezoneY","0.0515625 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[2103,"Grenade",[1,"",["0.436979 * safezoneW + safezoneX","0.489004 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[2104,"Rifle",[1,"",["0.436979 * safezoneW + safezoneX","0.532987 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2105,"Launcher",[1,"",["0.436979 * safezoneW + safezoneX","0.57697 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"OK",[1,"Ausrüsten",["0.385417 * safezoneW + safezoneX","0.620953 * safezoneH + safezoneY","0.229167 * safezoneW","0.0439828 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+	[2105,"Optic",[1,"",["0.436979 * safezoneW + safezoneX","0.57697 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"OK",[1,"Ausrï¿½sten",["0.385417 * safezoneW + safezoneX","0.664936 * safezoneH + safezoneY","0.229167 * safezoneW","0.0439828 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1006,"",[1,"Werfer",["0.379688 * safezoneW + safezoneX","0.620953 * safezoneH + safezoneY","0.0515625 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2106,"Launcher",[1,"",["0.436979 * safezoneW + safezoneX","0.620953 * safezoneH + safezoneY","0.177604 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
 ////////////////////////////////////////////////////////
@@ -98,12 +100,21 @@ class CODIRscText_1004: CODIRscText
 	w = 0.0515625 * safezoneW;
 	h = 0.0219914 * safezoneH;
 };
-class CODIRscText_1005: CODIRscText
+class RscText_1006: CODIRscText
 {
-	idc = 1005;
-	text = "Werfer";
+	idc = 1006;
+	text = "Optik"; //--- ToDo: Localize;
 	x = 0.379688 * safezoneW + safezoneX;
 	y = 0.57697 * safezoneH + safezoneY;
+	w = 0.0515625 * safezoneW;
+	h = 0.0219914 * safezoneH;
+};
+class RscText_1005: CODIRscText
+{
+	idc = 1005;
+	text = "Werfer"; //--- ToDo: Localize;
+	x = 0.379688 * safezoneW + safezoneX;
+	y = 0.620953 * safezoneH + safezoneY;
 	w = 0.0515625 * safezoneW;
 	h = 0.0219914 * safezoneH;
 };
@@ -122,12 +133,22 @@ class Rifle: CODIRscCombo
 	y = 0.532987 * safezoneH + safezoneY;
 	w = 0.177604 * safezoneW;
 	h = 0.0219914 * safezoneH;
+	onLBSelChanged = "execVM '\1st_Core\CODI\LO\GUIrifleChanged.sqf'";
+};
+class Optic: CODIRscCombo
+{
+	idc = 2106;
+	x = 0.436979 * safezoneW + safezoneX;
+	y = 0.57697 * safezoneH + safezoneY;
+	w = 0.177604 * safezoneW;
+	h = 0.0219914 * safezoneH;
+	onLBSelChanged = "execVM '\1st_Core\CODI\LO\GUIopticChanged.sqf'";
 };
 class Launcher: CODIRscCombo
 {
 	idc = 2105;
 	x = 0.436979 * safezoneW + safezoneX;
-	y = 0.57697 * safezoneH + safezoneY;
+	y = 0.620953 * safezoneH + safezoneY;
 	w = 0.177604 * safezoneW;
 	h = 0.0219914 * safezoneH;
 };
@@ -136,7 +157,7 @@ class OK: CODIRscButton
 	idc = 1600;
 	text = "Ausrüsten";
 	x = 0.385417 * safezoneW + safezoneX;
-	y = 0.620953 * safezoneH + safezoneY;
+	y = 0.664936 * safezoneH + safezoneY;
 	w = 0.229167 * safezoneW;
 	h = 0.0439828 * safezoneH;
 	action = "call CODI_LO_fnc_guiEquip";

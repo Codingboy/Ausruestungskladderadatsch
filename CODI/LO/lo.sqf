@@ -447,6 +447,12 @@ CODI_LO_fnc_guiEquip = {
 	{
 		[player] call CODI_LO_postLoadout;
 	};
+	
+	private _primaryWeaponOptic = [];
+	if (lbSize 2106 > 0) then
+	{
+		_primaryWeaponOptic = [lbText [2106, lbCurSel 2106]];
+	};
 	if (lbSize 2102 > 0) then
 	{
 		call compile format["[player] call CODI_LO_fnc_%1", lbText[2102, lbCurSel 2102]];
@@ -466,6 +472,10 @@ CODI_LO_fnc_guiEquip = {
 	if (!isNil "CODI_LO_postWeaponLoadout") then
 	{
 		[player] call CODI_LO_postWeaponLoadout;
+	};
+	if (count _primaryWeaponOptic > 0) then
+	{
+		CODI_LO_primaryWeaponOptic = _primaryWeaponOptic;
 	};
 	[player] call CODI_LO_fnc_equip;
 	closeDialog 0;

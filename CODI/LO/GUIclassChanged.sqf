@@ -3,6 +3,7 @@ lbClear 2102;
 lbClear 2103;
 lbClear 2104;
 lbClear 2105;
+lbClear 2106;
 _colour = lbText[2100, lbCurSel 2100];
 _class = lbText[2101, lbCurSel 2101];
 call CODI_LO_fnc_clearLoadout;
@@ -43,5 +44,21 @@ if (lbSize 2104 > 0) then
 if (lbSize 2105 > 0) then
 {
 	lbSetCurSel[2105, 0];
+};
+if (lbSize 2104 > 0) then
+{
+	call compile format["call CODI_LO_fnc_%1", lbText [2104, lbCurSel 2104]];
+	if (!isNil "CODI_LO_postWeaponLoadout") then
+	{
+		[player] call CODI_LO_postWeaponLoadout;
+	};
+	{
+		lbAdd[2106, _x];
+	}
+	forEach CODI_LO_primaryWeaponOptic;
+	if (lbSize 2106 > 0) then
+	{
+		lbSetCurSel[2106, 0];
+	};
 };
 ctrlEnable [1600, true];
