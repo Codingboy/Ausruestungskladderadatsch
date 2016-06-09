@@ -62,10 +62,6 @@ if (isNil "CODI_LO_fnc_postInitSpecialAmmoResupply") then
 {
 	CODI_LO_fnc_postInitSpecialAmmoResupply = {};
 };
-if (isNil "CODI_LO_vanillaFatigue") then
-{
-	CODI_LO_vanillaFatigue = false;
-};
 if (isNil "CODI_LO_boxes") then
 {
 	CODI_LO_boxes = [];
