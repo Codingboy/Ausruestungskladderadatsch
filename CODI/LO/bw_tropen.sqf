@@ -90,12 +90,12 @@ CODI_LO_fnc_crew_bw_tropen = {
 };
 CODI_LO_fnc_com_bw_tropen = {
 	call CODI_LO_fnc_crew_bw_tropen;
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_sl_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_cq_bw_tropen = {
@@ -119,7 +119,7 @@ CODI_LO_fnc_pilot_bw_tropen = {
 };
 CODI_LO_fnc_helipilot_bw_tropen = {
 	call CODI_LO_fnc_helicrew_bw_tropen;
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 	CODI_LO_helmet = ["BWA3_Knighthelm","H_PilotHelmetHeli_B"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
@@ -167,7 +167,7 @@ CODI_LO_fnc_aa_bw_tropen = {
 };
 CODI_LO_fnc_flanker_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 	if (332350 in (getDLCs 1)) then
 	{
 		CODI_LO_uniform = ["U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_B_GhillieSuit","BWA3_Uniform_Ghillie_Tropen","BWA3_Uniform_Ghillie_idz_Tropen"];
@@ -193,7 +193,7 @@ CODI_LO_fnc_spotter_bw_tropen = {
 CODI_LO_fnc_pl_bw_tropen = {
 	call CODI_LO_fnc_rflm_bw_tropen;
 	CODI_LO_helmet = ["H_Beret_02"];
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 	["ACE_key_west"] call CODI_LO_fnc_addUniformItem;
 };
 CODI_LO_fnc_fac_bw_tropen = {
@@ -201,5 +201,5 @@ CODI_LO_fnc_fac_bw_tropen = {
 	CODI_LO_weaponPacks set [2, ["g36_gl_fac","g3_gl_fac","g36mli_gl_fac"]];
 	CODI_LO_binocular = ["Laserdesignator"];
 	CODI_LO_binocularAmmo = ["Laserbatteries"];
-	CODI_LO_backpack = ["tf_rt1523g_big_bwmod"];
+	CODI_LO_backpack = ["tf_rt1523g_big_bwmod_tropen"];
 };
