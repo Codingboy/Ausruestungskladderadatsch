@@ -61,13 +61,15 @@ CODI_LO_fnc_cfr = {
 		["ACE_bloodIV", 6] call CODI_LO_fnc_addBackpackItem;
 	};*/
 	["CODI_MS_Item_Bandage", 30] call CODI_LO_fnc_addBackpackItem;
-	["CODI_MS_Item_Morphine", 10] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Morphine", 15] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_XStat", 30] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_QuikClot", 15] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Tourniquet", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Saline", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Epinephrine", 5] call CODI_LO_fnc_addBackpackItem;
-	player setVariable ["ACE_Medical_medicClass", 1, true];
+	["CODI_MS_Item_Naloxone", 5] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Chloroform", 5] call CODI_LO_fnc_addBackpackItem;
+	player setVariable ["CODI_MS_cfr", 1];
 };
 CODI_LO_fnc_medic = {
 	call CODI_LO_fnc_rflm;
@@ -95,15 +97,16 @@ CODI_LO_fnc_medic = {
 		["ACE_quikclot", 10] call CODI_LO_fnc_addBackpackItem;
 		["ACE_bloodIV", 10] call CODI_LO_fnc_addBackpackItem;
 	};*/
-	["CODI_MS_Item_Bandage", 30] call CODI_LO_fnc_addBackpackItem;
-	["CODI_MS_Item_Morphine", 20] call CODI_LO_fnc_addBackpackItem;
-	["CODI_MS_Item_SewingKit", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Bandage", 40] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Morphine", 30] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_SewingKit", 20] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_QuikClot", 15] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Blood", 20] call CODI_LO_fnc_addBackpackItem;
-	["CODI_MS_Item_Naloxone", 5] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Naloxone", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Epinephrine", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Adenosine", 10] call CODI_LO_fnc_addBackpackItem;
-	player setVariable ["ACE_Medical_medicClass", 1, true];
+	["CODI_MS_Item_Chloroform", 5] call CODI_LO_fnc_addBackpackItem;
+	player setVariable ["CODI_MS_medic", true];
 };
 CODI_LO_fnc_ftl = {
 	call CODI_LO_fnc_rflm;
