@@ -78,7 +78,7 @@
 						displayName = "disable_Virtual_Arsenal";
 						statement = "CODI_LO_option_va = false; publicVariable ""CODI_LO_option_va""";
 					};
-					class Enable_lva
+					/*class Enable_lva
 					{
 						condition = "!CODI_LO_option_lva";
 						displayName = "enable_whitelisted_Virtual_Arsenal";
@@ -89,7 +89,7 @@
 						condition = "CODI_LO_option_lva";
 						displayName = "disable_whitelisted_Virtual_Arsenal";
 						statement = "CODI_LO_option_lva = false; publicVariable ""CODI_LO_option_lva""";
-					};
+					};*/
 					class Enable_vaFor
 					{
 						condition = "!CODI_LO_option_va";
@@ -129,12 +129,12 @@
 					displayName = "Virtual Arsenal";
 					statement = "[""Open"",true] spawn BIS_fnc_arsenal";
 				};
-				class LVA
+				/*class LVA
 				{
 					condition = "CODI_LO_option_lva || _player getVariable[""CODI_LO_option_lva"", CODI_LO_option_lva]";
 					displayName = "whitelisted Virtual Arsenal";
 					statement = "[] spawn BIS_fnc_arsenal";
-				};
+				};*/
 				class Ausruesten
 				{
 					condition = "true";
