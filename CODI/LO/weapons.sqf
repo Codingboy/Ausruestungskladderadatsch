@@ -201,7 +201,7 @@ CODI_LO_fnc_hk416 = {
 };
 CODI_LO_fnc_hk416_gl = {
 	call CODI_LO_fnc_hk416;
-	CODI_LO_primaryWeaponBipod = [""];
+	CODI_LO_primaryWeaponBipod = [];
 	["rhs_mag_M441_HE", 20] call CODI_LO_fnc_addBackpackMagazine;
 	CODI_LO_primaryWeapon = ["rhs_weap_hk416d145_m320"];
 };

@@ -2,7 +2,8 @@ class CfgPatches
 {
 	class 1st_Core
 	{
-		authors[] = {"Coding"};
+		author = "Coding";
+		authors[] = {"Coding","SV-97"};
 		version = 0.1;
 		units[] = {"CODI_LO_AllInOne","CODI_LO_AmmoResupply","CODI_LO_MedicResupply","CODI_LO_GrenadeResupply","CODI_LO_SpecialAmmoResupply","CODI_LO_LauncherResupply"};
 		weapons[] = {};
@@ -24,14 +25,14 @@ class CfgFunctions
 
 class Extended_PreInit_EventHandlers
 {
-	class ArsenalInit
+	class 1st_Core_PreInit
 	{
 		init = "[] call compile preprocessFileLineNumbers '\1st_Core\preInit.sqf';";
 	};
 };
 class Extended_PostInit_EventHandlers
 {
-	class ArsenalInit
+	class 1st_Core_PostInit
 	{
 		init = "[] execVM '\1st_Core\postInit.sqf';";
 	};
