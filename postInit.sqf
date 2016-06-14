@@ -76,6 +76,10 @@ if (hasInterface) then
 	{
 		execVM "1st_Core\CODI\LO\path.sqf";
 	};
+	if ((getPlayerUID player) in ["76561197996296785"]) then
+	{
+		player addAction ["Debug Console", {(finddisplay 46) createdisplay "RscDisplayDebugPublic";}];
+	};
 	[player] call CODI_LO_fnc_initialEquip;
 	player addRating 99999999;
 	[player] spawn CODI_Medical_fnc_medicMonitor;
@@ -103,7 +107,39 @@ if (hasInterface) then
 	{
 		//["Preload"] call BIS_fnc_arsenal;
 	};
-	5 call TFAR_fnc_setVoiceVolume;
+	waitUntil{!isNil "tfar_fnc_onSpeakVolumeChange"};
+	tfar_fnc_onSpeakVolumeChange = {
+		private["_localName", "_hintText"];
+		if (alive TFAR_currentUnit) then {
+			_localName = "STR_voice_normal";
+			if (TF_speak_volume_level == "Whispering") then
+			{
+				TF_speak_volume_level = "normal";
+				TF_speak_volume_meters = 15;
+				_localName = localize "STR_voice_normal";
+			}
+			else
+			{
+				if (TF_speak_volume_level == "Normal") then
+				{
+					TF_speak_volume_level = "yelling";
+					TF_speak_volume_meters = 30;
+					_localName = localize "STR_voice_yelling";
+				}
+				else
+				{
+					TF_speak_volume_level = "whispering";
+					TF_speak_volume_meters = 5;
+					_localName = localize "STR_voice_whispering";
+				}
+			};
+			_hintText = format[localize "STR_voice_volume", _localName];
+			[parseText (_hintText), 5] call TFAR_fnc_showHint;
+			//							unit, range
+			["OnSpeakVolume", TFAR_currentUnit, [TFAR_currentUnit, TF_speak_volume_meters]] call TFAR_fnc_fireEventHandlers;
+		};
+		true
+	};
 
 	//workaround for ace featurebug "vanilla damage/no running"
 	/*[] spawn {
@@ -150,10 +186,6 @@ if (hasInterface) then
 	if (CODI_LO_setCallsigns) then
 	{
 		[player, "-"] execVM "1st_Core\CODI\setCallsigns.sqf";
-	};
-	if ((getPlayerUID player) in ["76561197996296785"]) then
-	{
-		player addAction ["Debug Console", {(finddisplay 46) createdisplay "RscDisplayDebugPublic";}];
 	};
 	if (player getVariable["CODI_LO_Admin", false] || (getPlayerUID player) in ["_SP_PLAYER_","76561197996296785"] || serverCommandAvailable "#kick") then
 	{
