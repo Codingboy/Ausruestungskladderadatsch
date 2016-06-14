@@ -223,7 +223,7 @@ CODI_LO_fnc_ammoBox_usmc_wood = {
 CODI_LO_fnc_medicBox_usmc_wood = {
 	private["_box"];
 	_box = param[0, objNull];
-	if (ace_medical_level == 2) then
+	/*if (ace_medical_level == 2) then
 	{
 		_box addItemCargoGlobal ["CODI_MS_Item_Morphine", 20];
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
@@ -241,7 +241,20 @@ CODI_LO_fnc_medicBox_usmc_wood = {
 		_box addItemCargoGlobal ["ACE_epinephrine", 20];
 		_box addItemCargoGlobal ["CODI_MS_Item_Bandage", 80];
 		_box addItemCargoGlobal ["ACE_bloodIV", 15];
-	};
+	};*/
+	_box addItemCargoGlobal ["CODI_MS_Item_Bandage", 80];
+	_box addItemCargoGlobal ["CODI_MS_Item_XStat", 20];
+	_box addItemCargoGlobal ["CODI_MS_Item_Morphine", 30];
+	_box addItemCargoGlobal ["CODI_MS_Item_Tourniquet", 10];
+	_box addItemCargoGlobal ["CODI_MS_Item_SewingKit", 20];
+	_box addItemCargoGlobal ["CODI_MS_Item_QuikClot", 20];
+	_box addItemCargoGlobal ["CODI_MS_Item_Blood0", 20];
+	_box addItemCargoGlobal ["CODI_MS_Item_Naloxone", 10];
+	_box addItemCargoGlobal ["CODI_MS_Item_Epinephrine", 10];
+	_box addItemCargoGlobal ["CODI_MS_Item_Adenosine", 10];
+	_box addItemCargoGlobal ["CODI_MS_Item_Chloroform", 5];
+	_box addItemCargoGlobal ["CODI_MS_Item_Saline", 10];
+	_box addItemCargoGlobal ["CODI_MS_Item_Bloodbag", 10];
 };
 CODI_LO_fnc_specialAmmoBox_usmc_wood = {
 	private["_box"];
