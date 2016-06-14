@@ -69,7 +69,8 @@ CODI_LO_fnc_cfr = {
 	["CODI_MS_Item_Epinephrine", 5] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Naloxone", 5] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Chloroform", 5] call CODI_LO_fnc_addBackpackItem;
-	player setVariable ["CODI_MS_cfr", 1];
+	["CODI_MS_Item_Bloodbag", 5] call CODI_LO_fnc_addBackpackItem;
+	player setVariable ["CODI_MS_cfr", true];
 };
 CODI_LO_fnc_medic = {
 	call CODI_LO_fnc_rflm;
@@ -101,11 +102,12 @@ CODI_LO_fnc_medic = {
 	["CODI_MS_Item_Morphine", 30] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_SewingKit", 20] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_QuikClot", 15] call CODI_LO_fnc_addBackpackItem;
-	["CODI_MS_Item_Blood", 20] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Blood0", 20] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Naloxone", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Epinephrine", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Adenosine", 10] call CODI_LO_fnc_addBackpackItem;
 	["CODI_MS_Item_Chloroform", 5] call CODI_LO_fnc_addBackpackItem;
+	["CODI_MS_Item_Bloodbag", 5] call CODI_LO_fnc_addBackpackItem;
 	player setVariable ["CODI_MS_medic", true];
 };
 CODI_LO_fnc_ftl = {
