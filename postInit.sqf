@@ -107,58 +107,6 @@ if (hasInterface) then
 	{
 		//["Preload"] call BIS_fnc_arsenal;
 	};
-	waitUntil{!isNil "tfar_fnc_onSpeakVolumeChange"};
-	CODI_LO_whisperOnly = false;
-	tfar_fnc_onSpeakVolumeChange = {
-		private["_localName", "_hintText"];
-		if (CODI_LO_whisperOnly) exitWith{true};
-		if (alive TFAR_currentUnit) then {
-			_localName = "STR_voice_normal";
-			if (TF_speak_volume_level == "Whispering") then
-			{
-				TF_speak_volume_level = "normal";
-				TF_speak_volume_meters = 15;
-				_localName = localize "STR_voice_normal";
-			}
-			else
-			{
-				if (TF_speak_volume_level == "Normal") then
-				{
-					TF_speak_volume_level = "yelling";
-					TF_speak_volume_meters = 30;
-					_localName = localize "STR_voice_yelling";
-				}
-				else
-				{
-					TF_speak_volume_level = "whispering";
-					TF_speak_volume_meters = 5;
-					_localName = localize "STR_voice_whispering";
-				}
-			};
-			_hintText = format[localize "STR_voice_volume", _localName];
-			[parseText (_hintText), 5] call TFAR_fnc_showHint;
-			["OnSpeakVolume", TFAR_currentUnit, [TFAR_currentUnit, TF_speak_volume_meters]] call TFAR_fnc_fireEventHandlers;
-		};
-		true
-	};
-	[] spawn {
-		private _count = 0;
-		while {_count < 30} do
-		{
-			if (TF_speak_volume_level == "yelling") then
-			{
-				_count = _count + 1;
-			};
-			sleep 60;
-		};
-		CODI_LO_whisperOnly = true;
-		TF_speak_volume_level = "whispering";
-		TF_speak_volume_meters = 5;
-		private _localName = localize "STR_voice_whispering";
-		private _hintText = format[localize "STR_voice_volume", _localName];
-		[parseText (_hintText), 5] call TFAR_fnc_showHint;
-		["OnSpeakVolume", TFAR_currentUnit, [TFAR_currentUnit, TF_speak_volume_meters]] call TFAR_fnc_fireEventHandlers;
-	};
 
 	//workaround for ace featurebug "vanilla damage/no running"
 	/*[] spawn {
