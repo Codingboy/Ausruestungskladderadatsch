@@ -426,7 +426,8 @@ CODI_LO_fnc_initialEquip = {
 		{
 			if (count(CODI_LO_weaponPacks select _i) > 0) then
 			{
-				call compile format["[_unit] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select (floor(random(count(CODI_LO_weaponPacks select _i))))];
+				//call compile format["[_unit] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select (floor(random(count(CODI_LO_weaponPacks select _i))))];
+				call compile format["[_unit] call CODI_LO_fnc_%1;", (CODI_LO_weaponPacks select _i) select 0];
 			};
 		};
 		if (!isNil "CODI_LO_postWeaponLoadout") then
