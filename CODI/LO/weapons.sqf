@@ -1,4 +1,6 @@
 //pistolen
+CODI_LO_fnc_no_pistol = {
+};
 CODI_LO_fnc_fnx45 = {
 	["11Rnd_45ACP_Mag", 2] call CODI_LO_fnc_addVestMagazine;
 	CODI_LO_secondaryWeaponMagazines = ["11Rnd_45ACP_Mag"];
@@ -84,6 +86,8 @@ CODI_LO_fnc_pp2000_folded = {
 
 
 //granaten
+CODI_LO_fnc_no_grenade = {
+};
 CODI_LO_fnc_grenades_he = {
 	["HandGrenade", 3] call CODI_LO_fnc_addVestMagazine;
 	["SmokeShell", 1] call CODI_LO_fnc_addVestMagazine;
@@ -117,6 +121,8 @@ CODI_LO_fnc_grenades_smoke_bp = {
 
 
 //smg
+CODI_LO_fnc_no_rifle = {
+};
 CODI_LO_fnc_qcw05 = {
 	["VME_QCW05_50Rnd_DAP92", 5] call CODI_LO_fnc_addVestMagazine;
 	["VME_QCW05_50Rnd_DCV05", 5] call CODI_LO_fnc_addBackpackMagazine;
@@ -731,6 +737,8 @@ CODI_LO_fnc_cslr4 = {
 
 
 //launcher
+CODI_LO_fnc_no_launcher = {
+};
 CODI_LO_fnc_nlaw = {
 	CODI_LO_launcher = ["launch_NLAW_F"];
 };

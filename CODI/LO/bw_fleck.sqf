@@ -36,7 +36,7 @@ CODI_LO_fnc_unarmed_bw_fleck = {
 };
 CODI_LO_fnc_rflm_bw_fleck = {
 	call CODI_LO_fnc_unarmed_bw_fleck;
-	CODI_LO_weaponPacks = [["fnx45","p99"],["grenades_he","grenades_flash","grenades_smoke"],["g36","g3","g36mli"],[]];
+	CODI_LO_weaponPacks = [["fnx45","p99","no_pistol"],["grenades_he","grenades_flash","grenades_smoke","no_grenade"],["g36","","","g36mli","no_rifle"],["no_launcher"]];
 };
 CODI_LO_fnc_cfr_bw_fleck = {
 	call CODI_LO_fnc_rflm_bw_fleck;

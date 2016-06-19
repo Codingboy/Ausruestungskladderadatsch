@@ -36,7 +36,7 @@ CODI_LO_fnc_unarmed_usa_ocp = {
 };
 CODI_LO_fnc_rflm_usa_ocp = {
 	call CODI_LO_fnc_unarmed_usa_ocp;
-	CODI_LO_weaponPacks = [["fnx45","p99","m9"],["grenades_he","grenades_flash","grenades_smoke"],["m4","lar15"],[]];
+	CODI_LO_weaponPacks = [["fnx45","p99","m9","no_pistol"],["grenades_he","grenades_flash","grenades_smoke","no_grenade"],["m4","lar15","no_rifle"],["no_launcher"]];
 };
 CODI_LO_fnc_cfr_usa_ocp = {
 	call CODI_LO_fnc_rflm_usa_ocp;
