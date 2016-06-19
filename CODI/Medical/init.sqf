@@ -291,11 +291,12 @@ CODI_Medical_fnc_medicMonitor = {
 		{
 			CODI_MS_debug = false;
 			hintSilent "";
+			_unconsciousPrev = false;
 		};
 		if (_unconscious > 0) then
 		{
 			CODI_MS_debug = true;
+			_unconsciousPrev = true;
 		};
-		_unconsciousPrev = _unconscious > 0;
 	};
 };
