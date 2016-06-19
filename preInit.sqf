@@ -4,47 +4,6 @@ TF_give_microdagr_to_soldier = false;
 tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
-CODI_LO_fnc_enableFastrope = {
-	private["_state","_veh","_rope"];
-	_state = _this select 0;
-	_veh = _this select 1;
-	_veh setVariable["CODI_LO_fastropeEnabled", _state, true];
-	if (_state) then
-	{
-		if (count(ropes _veh) == 0) then
-		{
-			_rope = ropeCreate [_veh, "slingload0", 0];
-		};
-		{
-			ropeUnwind [_x, 5, 60];
-		}
-		forEach (ropes _veh);
-	}
-	else
-	{
-		{
-			ropeUnwind [_x, 5, 0];
-		}
-		forEach (ropes _veh);
-	};
-};
-CODI_LO_fnc_fastrope = {
-	private["_ms","_d","_s","_u","_v"];
-	_ms = 5;
-	_d = -3;
-	_s = _ms / 20;
-	_u = (_this select 0);
-	_v = (vehicle _u);
-	moveOut _u;
-	_u attachTo [_v, [0,0,_d]];
-	while {(getpos _u select 2) > 0 AND (speed _v) < 5} do
-	{
-		_u attachTo [_v, [0,0,_d]];
-		_d = _d - _s;
-		sleep 0.05;
-	};
-	detach _u;
-};
 CODI_LO_fnc_becomeZeus = {
 	_unit = _this select 0;
 	_uid = getPlayerUID _unit;
