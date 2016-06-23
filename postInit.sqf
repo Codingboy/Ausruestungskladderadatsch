@@ -62,10 +62,6 @@ if (isNil "CODI_LO_fnc_postInitSpecialAmmoResupply") then
 {
 	CODI_LO_fnc_postInitSpecialAmmoResupply = {};
 };
-if (isNil "CODI_LO_boxes") then
-{
-	CODI_LO_boxes = [];
-};
 CODI_LO_ServerInitialised = true;
 if (hasInterface) then
 {
@@ -163,6 +159,7 @@ if (hasInterface) then
 if (isServer) then
 {
 	[] spawn {
+		CODI_LO_boxes = [];
 		while {true} do
 		{
 			sleep 60;

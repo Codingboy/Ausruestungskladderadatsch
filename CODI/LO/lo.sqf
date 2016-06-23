@@ -393,6 +393,13 @@ CODI_LO_fnc_resolveClass = {
 CODI_LO_fnc_initialEquip = {
 	private["_equipUnarmed","_fnc","_customEquip","_resolved","_unit"];
 	_unit = param [0, player];
+	_customEquip = false;
+	if (!isNil "CODI_LO_customEquip") then
+	{
+		_customEquip = CODI_LO_customEquip;
+	};
+	_customEquip = _unit getVariable["CODI_LO_customEquip", _customEquip];
+	if (_customEquip) exitWith{};
 	call CODI_LO_fnc_clearLoadout;
 	call CODI_LO_fnc_clearWeaponLoadout;
 	_equipUnarmed = false;
@@ -401,12 +408,6 @@ CODI_LO_fnc_initialEquip = {
 		_equipUnarmed = CODI_LO_equipUnarmed;
 	};
 	_equipUnarmed = _unit getVariable["CODI_LO_equipUnarmed", _equipUnarmed];
-	_customEquip = false;
-	if (!isNil "CODI_LO_customEquip") then
-	{
-		_customEquip = CODI_LO_customEquip;
-	};
-	_customEquip = _unit getVariable["CODI_LO_customEquip", _customEquip];
 	_resolved = [_unit] call CODI_LO_fnc_resolveClass;
 	_fnc = "CODI_LO_fnc_" + (_resolved select 0);
 	if (_equipUnarmed) then
@@ -496,7 +497,7 @@ CODI_LO_fnc_addMagazinesToBox = {
 	forEach [CODI_LO_uniformMagazines, CODI_LO_vestMagazines, CODI_LO_backpackMagazines];
 };
 CODI_LO_fnc_clearBox = {
-	_box = _this select 0;
+	params["_box"];
 	clearItemCargoGlobal _box;
 	clearWeaponCargoGlobal _box;
 	clearMagazineCargoGlobal _box;
@@ -504,16 +505,15 @@ CODI_LO_fnc_clearBox = {
 };
 CODI_LO_fnc_fillBoxes = {
 	private["_box","_resolved","_class","_colour","_tmp"];
-	_tmp = CODI_LO_boxes;
+	while {count(CODI_LO_boxes) > 0} do
 	{
-		_box = _x;
+		_box = CODI_LO_boxes select 0;
 		_resolved = [_box] call CODI_LO_fnc_resolveClass;
 		_class = _resolved select 0;
 		_colour = _resolved select 1;
 		call compile format["[_box, ""%2""] call CODI_LO_fnc_%1;", _class, _colour];
 		CODI_LO_boxes deleteAt 0;
-	}
-	forEach _tmp;
+	};
 };
 CODI_LO_headsetOn = true;
 CODI_LO_fnc_lowerHeadSet = {
